@@ -6,17 +6,19 @@
 
 ## 1. 전체 레이어 구조
 
-키보드는 총 **7개 레이어**로 구성되어 있으며, 각 레이어는 규격에 맞춰 정확히 67개 키 바인딩을 유지합니다.
+키보드는 총 **9개 레이어**로 구성되어 있으며, 각 레이어는 규격에 맞춰 정확히 67개 키 바인딩을 유지합니다.
 
 | 레이어 번호 | 레이어 명 | 진입 방식 | 주요 기능 |
 | :---: | :--- | :--- | :--- |
-| **Layer 0** | **`default_layer`** | 기본값 / `to_win` 콤보 | **Windows 기본 레이어** (QWERTY, 엄지에 `MO 1`) |
-| **Layer 1** | **`lower_layer`** | 엄지 `MO 1` 홀드 | **Windows 보조 레이어** (F1~F12, 방향키, 마우스 클릭, 기호/편집키) |
+| **Layer 0** | **`default_layer`** | 기본값 / `to_win` 콤보 / `win_to_func` | **Windows 기본 레이어 (F키 모드)** (엄지에 `MO 1`) |
+| **Layer 1** | **`lower_layer`** | Windows F키 모드에서 엄지 `MO 1` 홀드 | **Windows 보조 레이어 (F1~F12, 기호/편집키)** |
 | **Layer 2** | **`layer_2`** | Lower 상태에서 좌측 하단 `MO 2` 홀드 | **부트로더 레이어** (UF2 펌웨어 업데이트 플래싱 모드) |
-| **Layer 3** | **`mac_layer`** | `to_mac` / `to_func` 콤보 | **Mac 기본 레이어 (F키 모드)** (엄지에 `MO 4`) |
-| **Layer 4** | **`mac_lower_layer`** | Mac F키 모드에서 엄지 `MO 4` 홀드 | **Mac 보조 레이어 (F1~F12)** |
-| **Layer 5** | **`mac_media_layer`** | `to_media` 콤보 | **Mac 미디어 모드** (엄지에 `MO 6`) |
+| **Layer 3** | **`mac_layer`** | `to_mac` 콤보 / `mac_to_func` | **Mac 기본 레이어 (F키 모드)** (엄지에 `MO 4`) |
+| **Layer 4** | **`mac_lower_layer`** | Mac F키 모드에서 엄지 `MO 4` 홀드 | **Mac 보조 레이어 (F1~F12, 기호/편집키)** |
+| **Layer 5** | **`mac_media_layer`** | `mac_to_media` 콤보 | **Mac 미디어 모드** (엄지에 `MO 6`) |
 | **Layer 6** | **`mac_media_lower_layer`**| Mac 미디어 모드에서 엄지 `MO 6` 홀드 | **Mac 미디어 보조 레이어 (멀티미디어 키)** |
+| **Layer 7** | **`win_media_layer`** | `win_to_media` 콤보 | **Windows 미디어 모드** (엄지에 `MO 8`) |
+| **Layer 8** | **`win_media_lower_layer`**| Windows 미디어 모드에서 엄지 `MO 8` 홀드 | **Windows 미디어 보조 레이어 (멀티미디어 키)** |
 
 ---
 
@@ -26,11 +28,15 @@
 
 | 기능 | 조작 방법 | 동작 설명 |
 | :--- | :--- | :--- |
-| **Windows 모드 전환** | 엄지 `MO` 누른 채 **`X` + `S`** 입력 | Layer 0(`default_layer`)으로 영구 전환 |
-| **Mac F키 모드 전환** | 엄지 `MO` 누른 채 **`X` + `A`** 입력 | Layer 3(`mac_layer`) F1~F12 모드로 전환 |
-| **Mac 멀티미디어 ↔ F키 토글** | 엄지 `MO` 누른 채 **`X` + `F`** 입력 | **Mac 멀티미디어 키 모드 ↔ F1~F12 모드 상호 전환** |
+| **Windows 모드 전환** | 엄지 `MO` 누른 채 **`X` + `S`** 입력 | Layer 0(`default_layer`) Windows 기본 모드로 전환 |
+| **Mac 모드 전환** | 엄지 `MO` 누른 채 **`X` + `A`** 입력 | Layer 3(`mac_layer`) Mac 기본 모드로 전환 |
+| **F키 ↔ 멀티미디어 키 토글** | 엄지 `MO` 누른 채 **`X` + `F`** 입력 | **현재 OS 안에서 F1~F12 ↔ 멀티미디어 키 모드 상호 전환** |
 | **시스템 소프트 리셋** | 엄지 `MO` 누른 채 **`LCTRL(48)` + `5` + `6`** 입력 | 시스템 재부팅 (`&sys_reset`) |
 | **부트로더(UF2 플래싱) 진입** | 엄지 `MO` 누른 채 좌측 하단 `MO 2` + 숫자 `5` 또는 `6` | USB 드라이브 모드로 부트로더 진입 |
+
+> 💡 **`X + F` 토글 동작**:
+> - **Windows 환경**: F1~F12 모드 ➔ Windows 미디어 모드 ➔ F1~F12 모드 상호 전환
+> - **Mac 환경**: F1~F12 모드 ➔ Mac 미디어 모드 ➔ F1~F12 모드 상호 전환
 
 ---
 
