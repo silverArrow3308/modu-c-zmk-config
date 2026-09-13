@@ -32,10 +32,12 @@
      * - 48번: Row 4의 'LCTRL' 키
      * -------------------------------------------------------------------------
      */
+
     combos {
         compatible = "zmk,combos";
 
         // [시스템 리셋] 엄지 MO 누른 채: LCTRL(48) + 5 + 6 키 동시 입력 -> 키보드 소프트 재부팅
+
         reset {
             bindings = <&sys_reset>;
             key-positions = <48 5 6>;
@@ -43,6 +45,7 @@
         };
 
         // [Windows 기본 모드 전환] 엄지 MO 누른 채: X(38) + S(26) -> Layer 0 (Windows F키 모드) 전환
+
         to_win {
             bindings = <&to 0>;
             key-positions = <26 38>;
@@ -50,6 +53,7 @@
         };
 
         // [Mac 기본 모드 전환] 엄지 MO 누른 채: X(38) + A(25) -> Layer 3 (Mac F키 모드) 전환
+
         to_mac {
             bindings = <&to 3>;
             key-positions = <25 38>;
@@ -57,6 +61,7 @@
         };
 
         // [Windows 미디어 모드 전환] Windows F키 모드에서 엄지 MO 누른 채: X(38) + F(28) -> Layer 7 (Windows 미디어 모드) 전환
+
         win_to_media {
             bindings = <&to 7>;
             key-positions = <28 38>;
@@ -64,6 +69,7 @@
         };
 
         // [Windows F키 모드 복귀] Windows 미디어 모드에서 엄지 MO 누른 채: X(38) + F(28) -> Layer 0 (Windows F키 모드) 복귀
+
         win_to_func {
             bindings = <&to 0>;
             key-positions = <28 38>;
@@ -71,6 +77,7 @@
         };
 
         // [Mac 미디어 모드 전환] Mac F키 모드에서 엄지 MO 누른 채: X(38) + F(28) -> Layer 5 (Mac 미디어 모드) 전환
+
         mac_to_media {
             bindings = <&to 5>;
             key-positions = <28 38>;
@@ -78,6 +85,7 @@
         };
 
         // [Mac F키 모드 복귀] Mac 미디어 모드에서 엄지 MO 누른 채: X(38) + F(28) -> Layer 3 (Mac F키 모드) 복귀
+
         mac_to_func {
             bindings = <&to 3>;
             key-positions = <28 38>;
@@ -98,23 +106,23 @@
             //                |LANG|SPC |MO1 |   |BSPC|RET |MO1 | B  |
 
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp BACKSPACE
-&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp HOME
-&kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp PG_UP
-&kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp PG_DN
-&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp END
+&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp INSERT
+&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp SLASH
+&kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
+&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp DELETE
 &kp LANG1  &kp SPACE  &mo 1                             &kp BSPC  &kp RET  &mo 1      &kp B
             >;
         };
 
         lower_layer {
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5  &kp F6  &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12
-&kp GRAVE   &kp HOME      &kp UP        &kp END       &trans  &trans  &mkp MCLK  &trans     &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT
-&trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans  &trans  &mkp RCLK  &trans     &trans     &trans     &trans     &kp SQT
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &mkp LCLK  &trans     &trans     &trans     &trans     &kp BSLH
-&mo 2       &trans        &trans        &trans        &trans  &trans  &trans     &trans     &trans     &kp PSCRN  &kp INS    &kp DEL
-&trans      &trans        &trans                                      &kp ENTER  &kp BACKSPACE  &trans  &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5  &kp F6  &kp F7     &kp F8         &kp F9     &kp F10    &kp F11   &kp F12
+&kp GRAVE   &kp HOME      &kp UP        &kp END       &trans  &trans  &mkp MCLK  &trans         &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
+&trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans  &trans  &mkp RCLK  &trans         &trans     &trans     &trans    &kp SQT
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &mkp LCLK  &trans         &trans     &trans     &trans    &kp BSLH
+&mo 2       &trans        &trans        &trans        &trans  &trans  &trans     &trans         &trans     &kp PSCRN  &kp INS   &kp DEL
+&trans      &trans        &trans                                      &kp ENTER  &kp BACKSPACE  &trans     &trans
             >;
         };
 
@@ -133,6 +141,7 @@
             // -----------------------------------------------------------------
             // Left modifiers for Mac:
             // | CTRL | OPT(ALT) | CMD(GUI) | ... | SPACE |
+
             bindings = <
 &kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp BACKSPACE
 &kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp HOME
@@ -145,18 +154,19 @@
 
         mac_lower_layer {
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5  &kp F6  &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12
-&kp GRAVE   &kp HOME      &kp UP        &kp END       &trans  &trans  &mkp MCLK  &trans     &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT
-&trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans  &trans  &mkp RCLK  &trans     &trans     &trans     &trans     &kp SQT
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &mkp LCLK  &trans     &trans     &trans     &trans     &kp BSLH
-&mo 2       &trans        &trans        &trans        &trans  &trans  &trans     &trans     &trans     &kp PSCRN  &kp INS    &kp DEL
-&trans      &trans        &trans                                      &kp ENTER  &kp BACKSPACE  &trans  &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5  &kp F6  &kp F7     &kp F8         &kp F9     &kp F10    &kp F11   &kp F12
+&kp GRAVE   &kp HOME      &kp UP        &kp END       &trans  &trans  &mkp MCLK  &trans         &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
+&trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans  &trans  &mkp RCLK  &trans         &trans     &trans     &trans    &kp SQT
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &mkp LCLK  &trans         &trans     &trans     &trans    &kp BSLH
+&mo 2       &trans        &trans        &trans        &trans  &trans  &trans     &trans         &trans     &kp PSCRN  &kp INS   &kp DEL
+&trans      &trans        &trans                                      &kp ENTER  &kp BACKSPACE  &trans     &trans
             >;
         };
 
         mac_media_layer {
             // -----------------------------------------------------------------
             // Mac layer with Media keys enabled on Lower (mo 6)
+
             bindings = <
 &kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp BACKSPACE
 &kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp HOME
@@ -169,18 +179,19 @@
 
         mac_media_lower_layer {
             bindings = <
-&kp C_BRI_DN  &kp C_BRI_UP  &kp F3        &kp C_AC_SEARCH  &kp C_VOICE_COMMAND  &kp F6  &kp C_PREV  &kp C_PP   &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
-&kp GRAVE     &kp HOME      &kp UP        &kp END          &trans               &trans  &mkp MCLK   &trans     &kp MINUS   &kp EQUAL   &kp LBKT      &kp RBKT
-&trans        &kp LEFT      &kp DOWN      &kp RIGHT        &trans               &trans  &mkp RCLK   &trans     &trans      &trans      &trans        &kp SQT
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &trans  &mkp LCLK   &trans     &trans      &trans      &trans        &kp BSLH
-&mo 2         &trans        &trans        &trans           &trans               &trans  &trans      &trans     &trans      &kp PSCRN   &kp INS       &kp DEL
-&trans        &trans        &trans                                                      &kp ENTER   &kp BACKSPACE  &trans  &trans
+&kp C_BRI_DN  &kp C_BRI_UP  &kp F3        &kp C_AC_SEARCH  &kp C_VOICE_COMMAND  &kp F6  &kp C_PREV  &kp C_PP       &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
+&kp GRAVE     &kp HOME      &kp UP        &kp END          &trans               &trans  &mkp MCLK   &trans         &kp MINUS   &kp EQUAL   &kp LBKT      &kp RBKT
+&trans        &kp LEFT      &kp DOWN      &kp RIGHT        &trans               &trans  &mkp RCLK   &trans         &trans      &trans      &trans        &kp SQT
+&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &trans  &mkp LCLK   &trans         &trans      &trans      &trans        &kp BSLH
+&mo 2         &trans        &trans        &trans           &trans               &trans  &trans      &trans         &trans      &kp PSCRN   &kp INS       &kp DEL
+&trans        &trans        &trans                                                      &kp ENTER   &kp BACKSPACE  &trans      &trans
             >;
         };
 
         win_media_layer {
             // -----------------------------------------------------------------
             // Windows layer with Media keys enabled on Lower (mo 8)
+
             bindings = <
 &kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp BACKSPACE
 &kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp HOME
@@ -193,12 +204,12 @@
 
         win_media_lower_layer {
             bindings = <
-&kp C_BRI_DN  &kp C_BRI_UP  &kp F3        &kp C_AC_SEARCH  &kp C_VOICE_COMMAND  &kp F6  &kp C_PREV  &kp C_PP   &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
-&kp GRAVE     &kp HOME      &kp UP        &kp END          &trans               &trans  &mkp MCLK   &trans     &kp MINUS   &kp EQUAL   &kp LBKT      &kp RBKT
-&trans        &kp LEFT      &kp DOWN      &kp RIGHT        &trans               &trans  &mkp RCLK   &trans     &trans      &trans      &trans        &kp SQT
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &trans  &mkp LCLK   &trans     &trans      &trans      &trans        &kp BSLH
-&mo 2         &trans        &trans        &trans           &trans               &trans  &trans      &trans     &trans      &kp PSCRN   &kp INS       &kp DEL
-&trans        &trans        &trans                                                      &kp ENTER   &kp BACKSPACE  &trans  &trans
+&kp C_BRI_DN  &kp C_BRI_UP  &kp F3        &kp C_AC_SEARCH  &kp C_VOICE_COMMAND  &kp F6  &kp C_PREV  &kp C_PP       &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
+&kp GRAVE     &kp HOME      &kp UP        &kp END          &trans               &trans  &mkp MCLK   &trans         &kp MINUS   &kp EQUAL   &kp LBKT      &kp RBKT
+&trans        &kp LEFT      &kp DOWN      &kp RIGHT        &trans               &trans  &mkp RCLK   &trans         &trans      &trans      &trans        &kp SQT
+&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &trans  &mkp LCLK   &trans         &trans      &trans      &trans        &kp BSLH
+&mo 2         &trans        &trans        &trans           &trans               &trans  &trans      &trans         &trans      &kp PSCRN   &kp INS       &kp DEL
+&trans        &trans        &trans                                                      &kp ENTER   &kp BACKSPACE  &trans      &trans
             >;
         };
     };
