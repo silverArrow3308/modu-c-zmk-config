@@ -68,8 +68,8 @@
 ```
 [Row 4 좌측]  Control (^, &kp LCTRL)  |  Option (⌥, &kp LALT)  |  Command (⌘, &kp LGUI)
 [Row 4 우측]  Command (⌘, &kp RGUI)   |  Control (^, &kp RCTRL)|  Insert (&kp INSERT)
-[Row 5 엄지]  좌측: 한/영 (&kp LANG1) |  Lower (&mo 4 / &mo 6) |  Space (&kp SPACE)
-              우측: Space (&kp SPACE) |  Lower (&mo 4 / &mo 6) |  Backspace (&kp BSPC) | B
+[Row 5 엄지]  좌측: 한/영 (&kp LANG1) |  Space (&kp SPACE)     |  Lower (&mo 4 / &mo 6)
+              우측: Lower (&mo 4 / &mo 6) |  Space (&kp SPACE)     |  Backspace (&kp BSPC) | B
 ```
 
 ---

@@ -103,7 +103,7 @@
             // |CAPS| A  | S  | D  | F  | G  |   | H  | J  | K  | L  | ;  |RET |
             // |LSFT| Z  | X  | C  | V  | B  |   | N  | M  | ,  | .  | /  |RSFT|
             // |LCTL|LALT|LGUI|                                 |RALT|RCTRL|INS |
-            //                |LANG|MO1 |SPC |   |SPC |MO1 |BSPC| B  |
+            //                |LANG|SPC |MO1 |   |MO1 |SPC |BSPC| B  |
 
             bindings = <
 &kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp DELETE
@@ -111,7 +111,7 @@
 &kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
 &kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp INSERT
-&kp LANG1  &mo 1      &kp SPACE                         &kp SPACE &mo 1      &kp BSPC      &kp B
+&kp LANG1  &kp SPACE  &mo 1                             &mo 1     &kp SPACE  &kp BSPC      &kp B
             >;
         };
 
@@ -148,7 +148,7 @@
 &kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
 &kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RGUI  &kp RCTRL  &kp INSERT
-&kp LANG1  &mo 4      &kp SPACE                         &kp SPACE &mo 4      &kp BSPC      &kp B
+&kp LANG1  &kp SPACE  &mo 4                             &mo 4     &kp SPACE  &kp BSPC      &kp B
             >;
         };
 
@@ -173,7 +173,7 @@
 &kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
 &kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RGUI  &kp RCTRL  &kp INSERT
-&kp LANG1  &mo 6      &kp SPACE                         &kp SPACE &mo 6      &kp BSPC      &kp B
+&kp LANG1  &kp SPACE  &mo 6                             &mo 6     &kp SPACE  &kp BSPC      &kp B
             >;
         };
 
@@ -198,7 +198,7 @@
 &kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
 &kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp INSERT
-&kp LANG1  &mo 8      &kp SPACE                         &kp SPACE &mo 8      &kp BSPC      &kp B
+&kp LANG1  &kp SPACE  &mo 8                             &mo 8     &kp SPACE  &kp BSPC      &kp B
             >;
         };
 
