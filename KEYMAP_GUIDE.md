@@ -68,8 +68,10 @@
 ```
 [Row 4 좌측]  Control (^, &kp LCTRL)  |  Option (⌥, &kp LALT)  |  Command (⌘, &kp LGUI)
 [Row 4 우측]  Command (⌘, &kp RGUI)   |  Control (^, &kp RCTRL)|  Insert (&kp INSERT)
-[Row 5 엄지]  좌측: 한/영 (&kp LANG1) |  Space (&kp SPACE)     |  Lower (&mo 4 / &mo 6)
-              우측: Lower (&mo 4 / &mo 6) |  Space (&kp SPACE)     |  Backspace (&kp BSPC) | B
+[Row 5 엄지]  [Windows] 좌측: 한/영 (&kp LANG1) | Space (&kp SPACE) | Lower (&mo 1 / &mo 8)
+                        우측: 한/영 (&kp LANG1) | Space (&kp SPACE) | Delete (&kp DELETE) | B
+              [Mac]     좌측: 한/영 (&kp LANG1) | Space (&kp SPACE) | Lower (&mo 4 / &mo 6)
+                        우측: Lower (&mo 4 / &mo 6) | Space (&kp SPACE) | Delete (&kp DELETE) | B
 ```
 
 ---
@@ -89,7 +91,7 @@
 | **역슬래시** | **`RSHFT`** 자리 | **`\` / `\|`** (`&kp BSLH`) | 따옴표 바로 아래 (Row 3 끝) |
 | **스크린샷** | **`RALT`** 자리 | **`PSCRN`** (Print Screen) | 윈도우 스크린샷 캡처 |
 | **인서트** | **`RCTRL`** 자리 | **`INS`** (Insert) | 문서 삽입 모드 |
-| **딜리트** | **`INSERT`** 자리 | **`DEL`** (Delete) | 우측 하단 끝 Del 키 (기본 레이어 Row 0에도 Delete 지원) |
+| **딜리트** | **`INSERT`** 자리 | **`DEL`** (Delete) | 우측 하단 끝 Del 키 (기본 레이어 엄지에도 Delete 지원) |
 
 ---
 
