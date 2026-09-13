@@ -99,19 +99,19 @@
         default_layer {
             // -----------------------------------------------------------------
             // |ESC | 1  | 2  | 3  | 4  | 5  |   | 6  | 7  | 8  | 9  | 0  |DEL |
-            // |TAB | Q  | W  | E  | R  | T  |   | Y  | U  | I  | O  | P  |HOME|
-            // |CAPS| A  | S  | D  | F  | G  |   | H  | J  | K  | L  | ;  |PGUP|
-            // |LSFT| Z  | X  | C  | V  | B  |   | N  | M  | ,  | .  | /  |PGDN|
-            // |LCTL|LALT|LGUI|                                 |RALT|RCTRL|END |
-            //                |LANG|SPC |MO1 |   |BSPC|RET |MO1 | B  |
+            // |TAB | Q  | W  | E  | R  | T  |   | Y  | U  | I  | O  | P  |\   |
+            // |CAPS| A  | S  | D  | F  | G  |   | H  | J  | K  | L  | ;  |RET |
+            // |LSFT| Z  | X  | C  | V  | B  |   | N  | M  | ,  | .  | /  |RSFT|
+            // |LCTL|LALT|LGUI|                                 |RALT|RCTRL|INS |
+            //                |LANG|MO1 |SPC |   |SPC |MO1 |BSPC| B  |
 
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp INSERT
-&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp SLASH
+&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp DELETE
+&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp BSLH
 &kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
-&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp DELETE
-&kp LANG1  &kp SPACE  &mo 1                             &kp BSPC  &kp RET  &mo 1      &kp B
+&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp INSERT
+&kp LANG1  &mo 1      &kp SPACE                         &kp SPACE &mo 1      &kp BSPC      &kp B
             >;
         };
 
@@ -143,12 +143,12 @@
             // | CTRL | OPT(ALT) | CMD(GUI) | ... | SPACE |
 
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp BACKSPACE
-&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp HOME
-&kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp PG_UP
-&kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp PG_DN
-&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RGUI  &kp RCTRL  &kp END
-&kp LANG1  &kp SPACE  &mo 4                             &kp BSPC  &kp RET  &mo 4      &kp B
+&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp DELETE
+&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp BSLH
+&kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
+&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RGUI  &kp RCTRL  &kp INSERT
+&kp LANG1  &mo 4      &kp SPACE                         &kp SPACE &mo 4      &kp BSPC      &kp B
             >;
         };
 
@@ -168,12 +168,12 @@
             // Mac layer with Media keys enabled on Lower (mo 6)
 
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp BACKSPACE
-&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp HOME
-&kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp PG_UP
-&kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp PG_DN
-&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RGUI  &kp RCTRL  &kp END
-&kp LANG1  &kp SPACE  &mo 6                             &kp BSPC  &kp RET  &mo 6      &kp B
+&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp DELETE
+&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp BSLH
+&kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
+&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RGUI  &kp RCTRL  &kp INSERT
+&kp LANG1  &mo 6      &kp SPACE                         &kp SPACE &mo 6      &kp BSPC      &kp B
             >;
         };
 
@@ -193,12 +193,12 @@
             // Windows layer with Media keys enabled on Lower (mo 8)
 
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp BACKSPACE
-&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp HOME
-&kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp PG_UP
-&kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp PG_DN
-&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp END
-&kp LANG1  &kp SPACE  &mo 8                             &kp BSPC  &kp RET  &mo 8      &kp B
+&kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp DELETE
+&kp TAB    &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U    &kp I      &kp O     &kp P      &kp BSLH
+&kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
+&kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp INSERT
+&kp LANG1  &mo 8      &kp SPACE                         &kp SPACE &mo 8      &kp BSPC      &kp B
             >;
         };
 
