@@ -6,15 +6,17 @@
 
 ## 1. 전체 레이어 구조
 
-키보드는 총 **5개 레이어**로 구성되어 있으며, 각 레이어는 규격에 맞춰 정확히 67개 키 바인딩을 유지합니다.
+키보드는 총 **7개 레이어**로 구성되어 있으며, 각 레이어는 규격에 맞춰 정확히 67개 키 바인딩을 유지합니다.
 
 | 레이어 번호 | 레이어 명 | 진입 방식 | 주요 기능 |
 | :---: | :--- | :--- | :--- |
 | **Layer 0** | **`default_layer`** | 기본값 / `to_win` 콤보 | **Windows 기본 레이어** (QWERTY, 엄지에 `MO 1`) |
 | **Layer 1** | **`lower_layer`** | 엄지 `MO 1` 홀드 | **Windows 보조 레이어** (F1~F12, 방향키, 마우스 클릭, 기호/편집키) |
 | **Layer 2** | **`layer_2`** | Lower 상태에서 좌측 하단 `MO 2` 홀드 | **부트로더 레이어** (UF2 펌웨어 업데이트 플래싱 모드) |
-| **Layer 3** | **`mac_layer`** | `to_mac` 콤보 | **Mac 기본 레이어** (Control-Option-Command 모디파이어, 엄지에 `MO 4`) |
-| **Layer 4** | **`mac_lower_layer`** | 엄지 `MO 4` 홀드 | **Mac 보조 레이어** (Mac 모드 전용 최상위 Lower 레이어) |
+| **Layer 3** | **`mac_layer`** | `to_mac` / `to_func` 콤보 | **Mac 기본 레이어 (F키 모드)** (엄지에 `MO 4`) |
+| **Layer 4** | **`mac_lower_layer`** | Mac F키 모드에서 엄지 `MO 4` 홀드 | **Mac 보조 레이어 (F1~F12)** |
+| **Layer 5** | **`mac_media_layer`** | `to_media` 콤보 | **Mac 미디어 모드** (엄지에 `MO 6`) |
+| **Layer 6** | **`mac_media_lower_layer`**| Mac 미디어 모드에서 엄지 `MO 6` 홀드 | **Mac 미디어 보조 레이어 (멀티미디어 키)** |
 
 ---
 
@@ -22,37 +24,49 @@
 
 엄지 `MO` 키를 누르고 있는 동안(Lower 레이어 활성화 상태) 손가락으로 두 키를 함께 누르면 모드가 전환됩니다.
 
-```dts
-combos {
-    compatible = "zmk,combos";
-
-    reset   { bindings = <&sys_reset>; key-positions = <48 5 6>; layers = <1 4>; };
-    to_win  { bindings = <&to 0>;      key-positions = <26 38>;  layers = <1 4>; }; // S + X
-    to_mac  { bindings = <&to 3>;      key-positions = <25 38>;  layers = <1 4>; }; // A + X
-};
-```
-
 | 기능 | 조작 방법 | 동작 설명 |
 | :--- | :--- | :--- |
 | **Windows 모드 전환** | 엄지 `MO` 누른 채 **`X` + `S`** 입력 | Layer 0(`default_layer`)으로 영구 전환 |
-| **Mac 모드 전환** | 엄지 `MO` 누른 채 **`X` + `A`** 입력 | Layer 3(`mac_layer`)으로 영구 전환 |
+| **Mac F키 모드 전환** | 엄지 `MO` 누른 채 **`X` + `A`** 입력 | Layer 3(`mac_layer`) F1~F12 모드로 전환 |
+| **Mac 멀티미디어 ↔ F키 토글** | 엄지 `MO` 누른 채 **`X` + `F`** 입력 | **Mac 멀티미디어 키 모드 ↔ F1~F12 모드 상호 전환** |
 | **시스템 소프트 리셋** | 엄지 `MO` 누른 채 **`LCTRL(48)` + `5` + `6`** 입력 | 시스템 재부팅 (`&sys_reset`) |
 | **부트로더(UF2 플래싱) 진입** | 엄지 `MO` 누른 채 좌측 하단 `MO 2` + 숫자 `5` 또는 `6` | USB 드라이브 모드로 부트로더 진입 |
 
 ---
 
-## 3. Mac 모드 (`mac_layer`) 좌측 하단 배열
+## 3. Mac 최신 표준 멀티미디어 키 매핑 (`mac_media_lower_layer`)
+
+`MO + X + F`를 눌러 미디어 모드로 전환한 후, 엄지 `MO`를 누르고 Row 0 상단 키를 누르면 최신 맥북 표준 기능이 작동합니다:
+
+| 키 위치 | 아이콘 | 기능 이름 | ZMK 키 코드 | 설명 |
+| :---: | :---: | :--- | :--- | :--- |
+| **F1** | 🔅 | 화면 밝기 낮춤 | `&kp C_BRI_DN` | 디스플레이 밝기 감소 |
+| **F2** | 🔆 | 화면 밝기 높임 | `&kp C_BRI_UP` | 디스플레이 밝기 증가 |
+| **F3** | ⊞ | 미션 컨트롤 | `&kp F3` | 열려 있는 모든 창 보기 |
+| **F4** | 🔍 | **Spotlight 검색 (돋보기)** | `&kp C_AC_SEARCH` | macOS 통합 검색창 팝업 |
+| **F5** | 🎙️ | **받아쓰기 / 음성 입력 (마이크)**| `&kp C_VOICE_COMMAND` | 실시간 음성 인식 텍스트 입력 |
+| **F6** | 🌙 | 집중 모드 (방해금지) | `&kp F6` | 알림 끄기 / 집중 모드 토글 |
+| **F7** | ◀◀ | 이전 곡 재생 | `&kp C_PREV` | 이전 트랙으로 이동 |
+| **F8** | ▶❚❚ | 재생 / 일시정지 | `&kp C_PP` | 음악·영상 재생 및 일시정지 |
+| **F9** | ▶▶ | 다음 곡 재생 | `&kp C_NEXT` | 다음 트랙으로 이동 |
+| **F10** | 🔇 | 음소거 | `&kp C_MUTE` | 소리 끄기 / 켜기 |
+| **F11** | 🔉 | 볼륨 낮춤 | `&kp C_VOL_DN` | 소리 크기 줄이기 |
+| **F12** | 🔊 | 볼륨 높임 | `&kp C_VOL_UP` | 소리 크기 키우기 |
+
+---
+
+## 4. Mac 모드 (`mac_layer`) 좌측 하단 배열
 
 맥 OS 표준 환경에 맞춰 좌측 하단 모디파이어 키가 일치되어 있습니다.
 
 ```
 [Row 4 좌측]  Control (^, &kp LCTRL)  |  Option (⌥, &kp LALT)  |  Command (⌘, &kp LGUI)
-[Row 5 엄지]  한/영 (&kp LANG1)       |  Space (&kp SPACE)     |  Lower 호출 (&mo 4)
+[Row 5 엄지]  한/영 (&kp LANG1)       |  Space (&kp SPACE)     |  Lower 호출 (&mo 4 / &mo 6)
 ```
 
 ---
 
-## 4. 표준 기호 및 편집키 매핑 (`lower_layer` & `mac_lower_layer`)
+## 5. 표준 기호 및 편집키 매핑 (`lower_layer`, `mac_lower_layer`, `mac_media_lower_layer`)
 
 기본 레이어에 빠져 있던 기호키들을 **표준 키보드의 손 위치**에 맞춰 배치했습니다. 엄지 `MO` 키를 누른 채 타이핑합니다:
 
@@ -71,7 +85,7 @@ combos {
 
 ---
 
-## 5. 포인팅 & 기능키 매핑 (`lower_layer`)
+## 6. 포인팅 & 기능키 매핑 (`lower_layer`)
 
 - **트랙볼 마우스 클릭**:
   - `Y` 자리: **휠/중간 클릭** (`&mkp MCLK`)
