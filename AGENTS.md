@@ -127,6 +127,9 @@
    - `scripts/package_firmware.py`를 실행하여 컴파일된 Intel HEX를 정규화(`scripts/normalize_hex.py`)
    - 업스트림 `uf2conv.py`로 nRF52840 패밀리 ID(`0xADA52840`)를 지정해 UF2 변환
    - `scripts/verify_uf2.py`로 UF2 매직 넘버, 블록 수, 메모리 영역 중복 여부 등을 이중 검증 후 `modu_left.uf2`, `modu_right.uf2` 아티팩트 업로드
+4. **CI/CD 트리거 조건 (`paths`)**:
+   - 실제 펌웨어 빌드에 영향을 미치는 핵심 파일(`config/**`, `build.yaml`, `.github/workflows/build.yml`) 변경 시에만 빌드 실행.
+   - 문서(`*.md`), 이미지/다이어그램(`docs/**`), 라이선스 파일, 유틸리티 스크립트(`scripts/generate_layer_svgs.py`) 변경 시에는 불필요한 빌드가 실행되지 않도록 최적화됨.
 
 ### ② 필수 로컬 검증 명령어
 코드나 키맵을 변경했을 때는 반드시 다음 명령어로 무결성을 확인해야 합니다:

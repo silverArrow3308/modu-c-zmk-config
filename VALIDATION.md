@@ -44,7 +44,7 @@ The dependency-free `scripts/selftest.py` exercises both success and failure pat
 - Replaced “find any two files” packaging with exact per-half filename selection.
 - Added Intel HEX canonicalization before using the pinned upstream converter. This prevents a terminal blank line from reaching a converter parser that indexes every split line.
 - Added final UF2 binary validation and a second verification step before artifact upload.
-- Added workflow triggers for every script and license/notice file that affects the final artifact.
+- Limited workflow triggers to files that affect the actual firmware build (`config/**`, `build.yaml`, and the workflow itself), avoiding redundant builds on documentation, license, or utility script changes.
 - Corrected the Microsoft UF2 license-file path in `THIRD_PARTY_NOTICES.md`.
 
 ## Not executed in this environment

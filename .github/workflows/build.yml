@@ -4,23 +4,13 @@ name: Build MODU-C ZMK firmware
   push:
     paths:
       - "config/**"
-      - "scripts/**"
       - "build.yaml"
       - ".github/workflows/build.yml"
-      - "LICENSE"
-      - "NOTICE.md"
-      - "THIRD_PARTY_NOTICES.md"
-      - "LICENSES/**"
   pull_request:
     paths:
       - "config/**"
-      - "scripts/**"
       - "build.yaml"
       - ".github/workflows/build.yml"
-      - "LICENSE"
-      - "NOTICE.md"
-      - "THIRD_PARTY_NOTICES.md"
-      - "LICENSES/**"
   workflow_dispatch:
 
 permissions:

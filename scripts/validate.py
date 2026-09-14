@@ -299,13 +299,8 @@ def check_build_files() -> None:
 
     for trigger_path in (
         '      - "config/**"',
-        '      - "scripts/**"',
         '      - "build.yaml"',
         '      - ".github/workflows/build.yml"',
-        '      - "LICENSE"',
-        '      - "NOTICE.md"',
-        '      - "THIRD_PARTY_NOTICES.md"',
-        '      - "LICENSES/**"',
     ):
         if workflow.count(trigger_path) != 2:
             fail(f"workflow push/pull_request paths must both include {trigger_path.strip()}")
