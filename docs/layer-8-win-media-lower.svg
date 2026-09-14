@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="918" height="419" viewBox="0 0 918 419">
+<rect width="100%" height="100%" fill="white"/>
+<style>
+text{font-family:Arial,sans-serif;fill:#111}
+.key{fill:#f7f7f7;stroke:#222;stroke-width:1.2}
+.trans{fill:#fcfcfc;stroke:#ccc;stroke-width:1;stroke-dasharray:3 3}
+.mo{fill:#eef3ff;stroke:#3366cc;stroke-width:1.3}
+.boot{fill:#ffeeee;stroke:#cc3333;stroke-width:1.3}
+.none{fill:#ddd;stroke:#777;stroke-width:0.8}
+.title{font-weight:700;font-size:18px}
+.note{font-size:12px;fill:#555}
+.label{font-size:11px;text-anchor:middle;dominant-baseline:middle}
+.label-sm{font-size:9.5px;text-anchor:middle;dominant-baseline:middle}
+.label-trans{font-size:10px;text-anchor:middle;dominant-baseline:middle;fill:#aaa}
+</style>
+<text x="24" y="18" class="title">MODU-C Layer 8: Windows Media Lower (Media &amp; System Controls)</text>
+<rect class="key" x="24.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="51.5" y="67.5">BRI -</text>
+<rect class="key" x="82.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="109.5" y="67.5">BRI +</text>
+<rect class="key" x="140.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="167.5" y="67.5">F3</text>
+<rect class="key" x="198.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-sm" x="225.5" y="67.5">SEARCH</text>
+<rect class="key" x="256.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="283.5" y="67.5">VOICE</text>
+<rect class="key" x="314.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="341.5" y="67.5">F6</text>
+<rect class="key" x="488.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="515.5" y="67.5">PREV</text>
+<rect class="key" x="546.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="573.5" y="67.5">PLAY</text>
+<rect class="key" x="604.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="631.5" y="67.5">NEXT</text>
+<rect class="key" x="662.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="689.5" y="67.5">MUTE</text>
+<rect class="key" x="720.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="747.5" y="67.5">VOL -</text>
+<rect class="key" x="778.0" y="40.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="805.5" y="67.5">VOL +</text>
+<rect class="key" x="24.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="51.5" y="125.5">~</text>
+<rect class="key" x="82.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="109.5" y="125.5">HOME</text>
+<rect class="key" x="140.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="167.5" y="125.5">UP</text>
+<rect class="key" x="198.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="225.5" y="125.5">END</text>
+<rect class="trans" x="256.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="283.5" y="125.5">▽</text>
+<rect class="trans" x="314.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="341.5" y="125.5">▽</text>
+<rect class="key" x="488.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="515.5" y="125.5">M-CLK</text>
+<rect class="key" x="546.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="573.5" y="125.5">~</text>
+<rect class="key" x="604.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="631.5" y="125.5">-</text>
+<rect class="key" x="662.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="689.5" y="125.5">=</text>
+<rect class="key" x="720.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="747.5" y="125.5">[</text>
+<rect class="key" x="778.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="805.5" y="125.5">]</text>
+<rect class="trans" x="24.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="51.5" y="183.5">▽</text>
+<rect class="key" x="82.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="109.5" y="183.5">LEFT</text>
+<rect class="key" x="140.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="167.5" y="183.5">DOWN</text>
+<rect class="key" x="198.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="225.5" y="183.5">RIGHT</text>
+<rect class="trans" x="256.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="283.5" y="183.5">▽</text>
+<rect class="trans" x="314.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="341.5" y="183.5">▽</text>
+<rect class="key" x="488.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="515.5" y="183.5">R-CLK</text>
+<rect class="trans" x="546.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="573.5" y="183.5">▽</text>
+<rect class="trans" x="604.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="631.5" y="183.5">▽</text>
+<rect class="trans" x="662.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="689.5" y="183.5">▽</text>
+<rect class="trans" x="720.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="747.5" y="183.5">▽</text>
+<rect class="key" x="778.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="805.5" y="183.5">'</text>
+<rect class="key" x="24.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-sm" x="51.5" y="241.5">BT CLR</text>
+<rect class="key" x="82.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="109.5" y="241.5">BT 1</text>
+<rect class="key" x="140.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="167.5" y="241.5">BT 2</text>
+<rect class="key" x="198.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="225.5" y="241.5">BT 3</text>
+<rect class="trans" x="256.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="283.5" y="241.5">▽</text>
+<rect class="trans" x="314.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="341.5" y="241.5">▽</text>
+<rect class="key" x="488.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="515.5" y="241.5">L-CLK</text>
+<rect class="trans" x="546.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="573.5" y="241.5">▽</text>
+<rect class="trans" x="604.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="631.5" y="241.5">▽</text>
+<rect class="trans" x="662.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="689.5" y="241.5">▽</text>
+<rect class="trans" x="720.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="747.5" y="241.5">▽</text>
+<rect class="key" x="778.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="805.5" y="241.5">\</text>
+<rect class="mo" x="24.0" y="272.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="51.5" y="299.5">MO 2</text>
+<rect class="trans" x="82.0" y="272.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="109.5" y="299.5">▽</text>
+<rect class="trans" x="140.0" y="272.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="167.5" y="299.5">▽</text>
+<rect class="none" x="348.8" y="294.0" width="9.8" height="9.8" rx="5"/>
+<rect class="none" x="370.8" y="294.0" width="9.8" height="9.8" rx="5"/>
+<rect class="none" x="392.9" y="294.0" width="9.8" height="9.8" rx="5"/>
+<rect class="none" x="414.9" y="294.0" width="9.8" height="9.8" rx="5"/>
+<rect class="none" x="437.0" y="294.0" width="9.8" height="9.8" rx="5"/>
+<rect class="none" x="459.0" y="294.0" width="9.8" height="9.8" rx="5"/>
+<rect class="key" x="662.0" y="272.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="689.5" y="299.5">PSCRN</text>
+<rect class="key" x="720.0" y="272.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="747.5" y="299.5">INS</text>
+<rect class="key" x="778.0" y="272.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="805.5" y="299.5">DEL</text>
+<rect class="trans" x="198.0" y="344.5" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="225.5" y="372.0">▽</text>
+<rect class="trans" x="256.0" y="344.5" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="283.5" y="372.0">▽</text>
+<rect class="trans" x="314.0" y="344.5" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="341.5" y="372.0">▽</text>
+<rect class="key" x="488.0" y="344.5" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="515.5" y="372.0">RET</text>
+<rect class="key" x="546.0" y="344.5" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="573.5" y="372.0">BSPC</text>
+<rect class="trans" x="604.0" y="344.5" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="631.5" y="372.0">▽</text>
+<rect class="trans" x="662.0" y="344.5" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="689.5" y="372.0">▽</text>
+<text x="24" y="411" class="note">엄지 MO 8 홀드 시 활성화 · 밝기, 검색, 음성인식, 미디어 및 음량 제어</text>
+</svg>

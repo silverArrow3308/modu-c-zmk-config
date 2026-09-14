@@ -8,17 +8,46 @@
 
 키보드는 총 **9개 레이어**로 구성되어 있으며, 각 레이어는 규격에 맞춰 정확히 67개 키 바인딩을 유지합니다.
 
-| 레이어 번호 | 레이어 명 | 진입 방식 | 주요 기능 |
-| :---: | :--- | :--- | :--- |
-| **Layer 0** | **`default_layer`** | 기본값 / `to_win` 콤보 / `win_to_func` | **Windows 기본 레이어 (F키 모드)** (엄지에 `MO 1`) |
-| **Layer 1** | **`lower_layer`** | Windows F키 모드에서 엄지 `MO 1` 홀드 | **Windows 보조 레이어 (F1~F12, 기호/편집키)** |
-| **Layer 2** | **`layer_2`** | Lower 상태에서 좌측 하단 `MO 2` 홀드 | **부트로더 레이어** (UF2 펌웨어 업데이트 플래싱 모드) |
-| **Layer 3** | **`mac_layer`** | `to_mac` 콤보 / `mac_to_func` | **Mac 기본 레이어 (F키 모드)** (엄지에 `MO 4`) |
-| **Layer 4** | **`mac_lower_layer`** | Mac F키 모드에서 엄지 `MO 4` 홀드 | **Mac 보조 레이어 (F1~F12, 기호/편집키)** |
-| **Layer 5** | **`mac_media_layer`** | `mac_to_media` 콤보 | **Mac 미디어 모드** (엄지에 `MO 6`) |
-| **Layer 6** | **`mac_media_lower_layer`**| Mac 미디어 모드에서 엄지 `MO 6` 홀드 | **Mac 미디어 보조 레이어 (멀티미디어 키)** |
-| **Layer 7** | **`win_media_layer`** | `win_to_media` 콤보 | **Windows 미디어 모드** (엄지에 `MO 8`) |
-| **Layer 8** | **`win_media_lower_layer`**| Windows 미디어 모드에서 엄지 `MO 8` 홀드 | **Windows 미디어 보조 레이어 (멀티미디어 키)** |
+| 레이어 번호 | 레이어 명 | 진입 방식 | 주요 기능 | 다이어그램 |
+| :---: | :--- | :--- | :--- | :---: |
+| **Layer 0** | **`default_layer`** | 기본값 / `to_win` 콤보 / `win_to_func` | **Windows 기본 레이어 (F키 모드)** (엄지에 `MO 1`) | [SVG](docs/layer-0-default.svg) |
+| **Layer 1** | **`lower_layer`** | Windows F키 모드에서 엄지 `MO 1` 홀드 | **Windows 보조 레이어 (F1~F12, 기호/편집키)** | [SVG](docs/layer-1-lower.svg) |
+| **Layer 2** | **`layer_2`** | Lower 상태에서 좌측 하단 `MO 2` 홀드 | **부트로더 레이어** (UF2 펌웨어 업데이트 플래싱 모드) | [SVG](docs/layer-2-bootloader.svg) |
+| **Layer 3** | **`mac_layer`** | `to_mac` 콤보 / `mac_to_func` | **Mac 기본 레이어 (F키 모드)** (엄지에 `MO 4`) | [SVG](docs/layer-3-mac.svg) |
+| **Layer 4** | **`mac_lower_layer`** | Mac F키 모드에서 엄지 `MO 4` 홀드 | **Mac 보조 레이어 (F1~F12, 기호/편집키)** | [SVG](docs/layer-4-mac-lower.svg) |
+| **Layer 5** | **`mac_media_layer`** | `mac_to_media` 콤보 | **Mac 미디어 모드** (엄지에 `MO 6`) | [SVG](docs/layer-5-mac-media.svg) |
+| **Layer 6** | **`mac_media_lower_layer`**| Mac 미디어 모드에서 엄지 `MO 6` 홀드 | **Mac 미디어 보조 레이어 (멀티미디어 키)** | [SVG](docs/layer-6-mac-media-lower.svg) |
+| **Layer 7** | **`win_media_layer`** | `win_to_media` 콤보 | **Windows 미디어 모드** (엄지에 `MO 8`) | [SVG](docs/layer-7-win-media.svg) |
+| **Layer 8** | **`win_media_lower_layer`**| Windows 미디어 모드에서 엄지 `MO 8` 홀드 | **Windows 미디어 보조 레이어 (멀티미디어 키)** | [SVG](docs/layer-8-win-media-lower.svg) |
+
+### 레이어별 시각 프리뷰 (Visual SVG Layouts)
+
+#### [Layer 0] Windows 기본 레이어 (`default_layer`)
+![Layer 0 - Windows Default](docs/layer-0-default.svg)
+
+#### [Layer 1] Windows 보조 레이어 (`lower_layer`)
+![Layer 1 - Windows Lower](docs/layer-1-lower.svg)
+
+#### [Layer 3] Mac 기본 레이어 (`mac_layer`)
+![Layer 3 - Mac Default](docs/layer-3-mac.svg)
+
+#### [Layer 4] Mac 보조 레이어 (`mac_lower_layer`)
+![Layer 4 - Mac Lower](docs/layer-4-mac-lower.svg)
+
+#### [Layer 5] Mac 미디어 기본 레이어 (`mac_media_layer`)
+![Layer 5 - Mac Media Default](docs/layer-5-mac-media.svg)
+
+#### [Layer 6] Mac 미디어 보조 레이어 (`mac_media_lower_layer`)
+![Layer 6 - Mac Media Lower](docs/layer-6-mac-media-lower.svg)
+
+#### [Layer 7] Windows 미디어 기본 레이어 (`win_media_layer`)
+![Layer 7 - Windows Media Default](docs/layer-7-win-media.svg)
+
+#### [Layer 8] Windows 미디어 보조 레이어 (`win_media_lower_layer`)
+![Layer 8 - Windows Media Lower](docs/layer-8-win-media-lower.svg)
+
+#### [Layer 2] 부트로더 레이어 (`layer_2`)
+![Layer 2 - Bootloader](docs/layer-2-bootloader.svg)
 
 ---
 
