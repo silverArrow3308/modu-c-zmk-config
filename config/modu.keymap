@@ -103,7 +103,7 @@
             // |CAPS| A  | S  | D  | F  | G  |   | H  | J  | K  | L  | ;  |RET |
             // |LSFT| Z  | X  | C  | V  | B  |   | N  | M  | ,  | .  | /  |RSFT|
             // |LCTL|LALT|LGUI|                                 |RALT|RCTRL|INS |
-            //                |LANG|SPC |MO1 |   |LANG|SPC |DEL | B  |
+            //                |BSPC|SPC |MO1 |   |LANG|SPC |DEL | B  |
 
             bindings = <
 &kp ESC    &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7   &kp N8     &kp N9    &kp N0     &kp BACKSPACE
@@ -111,15 +111,15 @@
 &kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
 &kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp INSERT
-&kp LANG1  &kp SPACE  &mo 1                             &kp LANG1 &kp SPACE  &kp DELETE    &kp B
+&kp BACKSPACE &kp SPACE  &mo 1                          &kp LANG1 &kp SPACE  &kp DELETE    &kp B
             >;
         };
 
         lower_layer {
             bindings = <
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5  &kp F6  &kp F7     &kp F8         &kp F9     &kp F10    &kp F11   &kp F12
-&kp GRAVE   &kp HOME      &kp UP        &kp END       &trans  &trans  &mkp MCLK  &kp GRAVE      &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
-&trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans  &trans  &mkp RCLK  &trans         &trans     &trans     &trans    &kp SQT
+&kp GRAVE   &kp HOME      &kp UP        &kp END       &kp LC(INS) &kp LS(INS) &mkp MCLK  &kp GRAVE      &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
+&trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans  &trans  &mkp RCLK  &kp LG(LS(S))  &trans     &trans     &trans    &kp SQT
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &mkp LCLK  &trans         &trans     &trans     &trans    &kp BSLH
 &mo 2       &trans        &trans        &trans        &trans  &trans  &trans     &trans         &trans     &kp PSCRN  &kp INS   &kp DEL
 &trans      &trans        &trans                                      &kp ENTER  &kp BACKSPACE  &trans     &trans
@@ -156,7 +156,7 @@
             bindings = <
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5  &kp F6  &kp F7     &kp F8         &kp F9     &kp F10    &kp F11   &kp F12
 &kp GRAVE   &kp HOME      &kp UP        &kp END       &trans  &trans  &mkp MCLK  &kp GRAVE      &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
-&trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans  &trans  &mkp RCLK  &trans         &trans     &trans     &trans    &kp SQT
+&trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans  &trans  &mkp RCLK  &kp LG(LS(N4)) &trans     &trans     &trans    &kp SQT
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &mkp LCLK  &trans         &trans     &trans     &trans    &kp BSLH
 &mo 2       &trans        &trans        &trans        &trans  &trans  &trans     &trans         &trans     &kp PSCRN  &kp INS   &kp DEL
 &trans      &trans        &trans                                      &kp ENTER  &kp BACKSPACE  &trans     &trans
@@ -181,7 +181,7 @@
             bindings = <
 &kp C_BRI_DN  &kp C_BRI_UP  &kp F3        &kp C_AC_SEARCH  &kp C_VOICE_COMMAND  &kp F6  &kp C_PREV  &kp C_PP       &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
 &kp GRAVE     &kp HOME      &kp UP        &kp END          &trans               &trans  &mkp MCLK   &kp GRAVE      &kp MINUS   &kp EQUAL   &kp LBKT      &kp RBKT
-&trans        &kp LEFT      &kp DOWN      &kp RIGHT        &trans               &trans  &mkp RCLK   &trans         &trans      &trans      &trans        &kp SQT
+&trans        &kp LEFT      &kp DOWN      &kp RIGHT        &trans               &trans  &mkp RCLK   &kp LG(LS(N4)) &trans      &trans      &trans        &kp SQT
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &trans  &mkp LCLK   &trans         &trans      &trans      &trans        &kp BSLH
 &mo 2         &trans        &trans        &trans           &trans               &trans  &trans      &trans         &trans      &kp PSCRN   &kp INS       &kp DEL
 &trans        &trans        &trans                                                      &kp ENTER   &kp BACKSPACE  &trans      &trans
@@ -198,15 +198,15 @@
 &kp CAPS   &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J    &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M    &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
 &kp LCTRL  &kp LALT   &kp LGUI  &none   &none   &none   &none     &none    &none      &kp RALT  &kp RCTRL  &kp INSERT
-&kp LANG1  &kp SPACE  &mo 8                             &kp LANG1 &kp SPACE  &kp DELETE    &kp B
+&kp BACKSPACE &kp SPACE  &mo 8                          &kp LANG1 &kp SPACE  &kp DELETE    &kp B
             >;
         };
 
         win_media_lower_layer {
             bindings = <
 &kp C_BRI_DN  &kp C_BRI_UP  &kp F3        &kp C_AC_SEARCH  &kp C_VOICE_COMMAND  &kp F6  &kp C_PREV  &kp C_PP       &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
-&kp GRAVE     &kp HOME      &kp UP        &kp END          &trans               &trans  &mkp MCLK   &kp GRAVE      &kp MINUS   &kp EQUAL   &kp LBKT      &kp RBKT
-&trans        &kp LEFT      &kp DOWN      &kp RIGHT        &trans               &trans  &mkp RCLK   &trans         &trans      &trans      &trans        &kp SQT
+&kp GRAVE     &kp HOME      &kp UP        &kp END          &kp LC(INS)          &kp LS(INS)    &mkp MCLK   &kp GRAVE      &kp MINUS   &kp EQUAL   &kp LBKT      &kp RBKT
+&trans        &kp LEFT      &kp DOWN      &kp RIGHT        &trans               &trans  &mkp RCLK   &kp LG(LS(S))  &trans      &trans      &trans        &kp SQT
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &trans  &mkp LCLK   &trans         &trans      &trans      &trans        &kp BSLH
 &mo 2         &trans        &trans        &trans           &trans               &trans  &trans      &trans         &trans      &kp PSCRN   &kp INS       &kp DEL
 &trans        &trans        &trans                                                      &kp ENTER   &kp BACKSPACE  &trans      &trans

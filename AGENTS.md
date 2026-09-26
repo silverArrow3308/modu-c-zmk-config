@@ -74,7 +74,7 @@
 
 ### ③ 엄지 클러스터 배치
 - **Windows (`default_layer` / `win_media_layer`)**:
-  - 좌측 엄지: `[한/영 (&kp LANG1)]` | `[Space]` | `[Lower (&mo 1 / &mo 8)]`
+  - 좌측 엄지: `[Backspace (&kp BACKSPACE)]` | `[Space]` | `[Lower (&mo 1 / &mo 8)]`
   - 우측 엄지: `[한/영 (&kp LANG1)]` | `[Space]` | `[Delete (&kp DELETE)]` | `[B]`
 - **Mac (`mac_layer` / `mac_media_layer`)**:
   - 좌측 엄지: `[한/영 (&kp LANG1)]` | `[Space]` | `[Lower (&mo 4 / &mo 6)]`

@@ -97,7 +97,7 @@
 ```
 [Row 4 좌측]  Control (^, &kp LCTRL)  |  Option (⌥, &kp LALT)  |  Command (⌘, &kp LGUI)
 [Row 4 우측]  Command (⌘, &kp RGUI)   |  Control (^, &kp RCTRL)|  Insert (&kp INSERT)
-[Row 5 엄지]  [Windows] 좌측: 한/영 (&kp LANG1) | Space (&kp SPACE) | Lower (&mo 1 / &mo 8)
+[Row 5 엄지]  [Windows] 좌측: Backspace (&kp BACKSPACE) | Space (&kp SPACE) | Lower (&mo 1 / &mo 8)
                         우측: 한/영 (&kp LANG1) | Space (&kp SPACE) | Delete (&kp DELETE) | B
               [Mac]     좌측: 한/영 (&kp LANG1) | Space (&kp SPACE) | Lower (&mo 4 / &mo 6)
                         우측: Lower (&mo 4 / &mo 6) | Space (&kp SPACE) | Delete (&kp DELETE) | B
@@ -118,7 +118,10 @@
 | **대괄호 닫기** | **`\` (`BSLH`)** 자리 | **`]` / `}`** (`&kp RBKT`) | 대괄호 열기 바로 오른쪽 (Row 1 끝) |
 | **따옴표** | **`ENTER`** 자리 | **`'` / `"`** (`&kp SQT`) | **세미콜론(`;`) 바로 오른쪽!** 표준 따옴표 손 위치 일치 |
 | **역슬래시** | **`RSHFT`** 자리 | **`\` / `\|`** (`&kp BSLH`) | 따옴표 바로 아래 (Row 3 끝) |
-| **스크린샷** | **`RALT`** 자리 | **`PSCRN`** (Print Screen) | 윈도우 스크린샷 캡처 |
+| **스크린샷** | **`RALT`** 자리 | **`PSCRN`** (Print Screen) | 윈도우 전체 스크린샷 캡처 |
+| **구역 캡처 (원키)** | **`J`** 자리 (`R-CLK` 바로 옆) | **`Win+Shift+S`** (Mac: `Cmd+Shift+4`) | **화면 구역(영역) 캡처 도구 단일키 실행** (`&kp LG(LS(S))` / `&kp LG(LS(N4))`) |
+| **복사 (Ctrl+Ins)** | **`R`** 자리 (`END` 바로 오른쪽) | **`Ctrl + Insert`** (`&kp LC(INS)`) | 윈도우 표준 복사 단축키 (터미널/에디터 원키 복사) |
+| **붙여넣기 (Shift+Ins)**| **`T`** 자리 (`복사` 바로 오른쪽) | **`Shift + Insert`** (`&kp LS(INS)`) | 윈도우 표준 붙여넣기 단축키 (터미널/에디터 원키 붙여넣기) |
 | **인서트** | **`RCTRL`** 자리 | **`INS`** (Insert) | 문서 삽입 모드 |
 | **딜리트** | **`INSERT`** 자리 | **`DEL`** (Delete) | 우측 하단 끝 Del 키 (기본 레이어 엄지에도 Delete 지원) |
 
@@ -126,12 +129,14 @@
 
 ## 6. 포인팅 & 기능키 매핑 (`lower_layer`)
 
-- **트랙볼 마우스 클릭**:
+- **트랙볼 마우스 클릭 & 캡처**:
   - `Y` 자리: **휠/중간 클릭** (`&mkp MCLK`)
   - `H` 자리: **우클릭** (`&mkp RCLK`)
+  - `J` 자리: **구역 캡처 (원키)** (`Win+Shift+S` / Mac: `Cmd+Shift+4`) — **R-CLK 바로 옆 배치!**
   - `N` 자리: **좌클릭** (`&mkp LCLK`)
-- **방향키 및 네비게이션**:
+- **방향키, 네비게이션 & 빠른 클립보드**:
   - `HOME`, `UP`, `END` / `LEFT`, `DOWN`, `RIGHT` (왼손 영역)
+  - `END` 옆: **`Ctrl + Insert` (복사)** (`R` 자리), **`Shift + Insert` (붙여넣기)** (`T` 자리) — **왼손 원키 편집 연속 배치**
 - **블루투스 페어링 제어**:
   - `BT_CLR` (페어링 초기화), `BT_SEL 0`, `BT_SEL 1`, `BT_SEL 2` (프로파일 1~3번 선택)
 - **펑션키**:

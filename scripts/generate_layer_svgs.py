@@ -118,6 +118,12 @@ LABEL_MAP: dict[str, str] = {
     "&mkp LCLK": "L-CLK",
     "&mkp MCLK": "M-CLK",
     "&mkp RCLK": "R-CLK",
+    "&kp LG(LS(S))": "SNIP",
+    "&kp LG(LS(N4))": "SNIP",
+    "&kp LC(INS)": "C-INS",
+    "&kp LS(INS)": "S-INS",
+    "&kp LC(INSERT)": "C-INS",
+    "&kp LS(INSERT)": "S-INS",
     "&mo 1": "MO 1",
     "&mo 2": "MO 2",
     "&mo 4": "MO 4",
@@ -192,7 +198,7 @@ def parse_keymap_layers() -> list[tuple[str, list[str]]]:
         raw = match.group(2)
         tokens = [
             b.strip()
-            for b in re.findall(r"&[A-Za-z0-9_]+(?:\s+[A-Za-z0-9_]+)*", raw)
+            for b in re.findall(r"&[A-Za-z0-9_]+(?:\s+[A-Za-z0-9_()]+)*", raw)
         ]
         layers.append((name, tokens))
     return layers
