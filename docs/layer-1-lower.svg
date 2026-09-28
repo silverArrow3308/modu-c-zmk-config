@@ -101,8 +101,8 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="225.5" y="241.5">BT 3</text>
 <rect class="trans" x="256.0" y="214.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="283.5" y="241.5">▽</text>
-<rect class="trans" x="314.0" y="214.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="341.5" y="241.5">▽</text>
+<rect class="mo" x="314.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="341.5" y="241.5">MEDIA</text>
 <rect class="key" x="488.0" y="214.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="515.5" y="241.5">L-CLK</text>
 <rect class="key" x="546.0" y="214.0" width="55.0" height="55.0" rx="5"/>
@@ -117,10 +117,10 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="805.5" y="241.5">RSFT</text>
 <rect class="mo" x="24.0" y="272.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="51.5" y="299.5">MO 2</text>
-<rect class="trans" x="82.0" y="272.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="109.5" y="299.5">▽</text>
-<rect class="trans" x="140.0" y="272.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="167.5" y="299.5">▽</text>
+<rect class="mo" x="82.0" y="272.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-sm" x="109.5" y="299.5">TO WIN</text>
+<rect class="mo" x="140.0" y="272.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-sm" x="167.5" y="299.5">TO MAC</text>
 <rect class="none" x="348.8" y="294.0" width="9.8" height="9.8" rx="5"/>
 <rect class="none" x="370.8" y="294.0" width="9.8" height="9.8" rx="5"/>
 <rect class="none" x="392.9" y="294.0" width="9.8" height="9.8" rx="5"/>
@@ -147,5 +147,5 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label-trans" x="631.5" y="372.0">▽</text>
 <rect class="trans" x="662.0" y="344.5" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="689.5" y="372.0">▽</text>
-<text x="24" y="411" class="note">엄지 MO 1 홀드 시 활성화 · F1~F12, 방향키, 넘패드/기호, 마우스 클릭(L/M/R-CLK), 블루투스 제어</text>
+<text x="24" y="411" class="note">엄지 MO 1 홀드 시 활성화 · F1~F12, Alt(Win), Cmd(Mac), B(Media), 방향키, 넘패드/기호, 마우스, BT</text>
 </svg>

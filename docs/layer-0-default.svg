@@ -144,5 +144,5 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="631.5" y="372.0">BSPC</text>
 <rect class="key" x="662.0" y="344.5" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="689.5" y="372.0">B</text>
-<text x="24" y="411" class="note">Windows 기본 레이어 · 엄지 MO 1로 Lower 진입 · X+S(Win), X+A(Mac), X+F(Media)</text>
+<text x="24" y="411" class="note">Windows 기본 레이어 · 엄지 MO 1로 Lower 진입 · Lower에서 Alt(Win), Cmd(Mac), B(Media)</text>
 </svg>

@@ -62,15 +62,15 @@
 ### ② 9개 레이어 구조 분석
 | 레이어 | 이름 | 진입 방식 | 주요 역할 및 특징 |
 | :---: | :--- | :--- | :--- |
-| **Layer 0** | `default_layer` | 기본값 / `to_win` | **Windows 기본 모드** (우상단 Delete, RALT 자리 한/영, 양손 엄지 MO 1, 우측 엄지 Backspace) |
-| **Layer 1** | `lower_layer` | 엄지 `MO 1` 홀드 | **Windows 보조 레이어** (F1~F12, 표준 기호열, 방향키, 마우스 클릭, BT 제어) |
+| **Layer 0** | `default_layer` | 기본값 / Lower `Alt(49)` / 미디어 `B(41)` | **Windows 기본 모드** (우상단 Delete, RALT 자리 한/영, 양손 엄지 MO 1, 우측 엄지 Backspace) |
+| **Layer 1** | `lower_layer` | 엄지 `MO 1` 홀드 | **Windows 보조 레이어** (F1~F12, Alt:Win, Cmd:Mac, B:Media, 기호/편집키, 마우스, BT) |
 | **Layer 2** | `layer_2` | Lower에서 `MO 2` 홀드 | **부트로더 레이어** (5, 6번 누르면 UF2 펌웨어 플래싱 모드 진입) |
-| **Layer 3** | `mac_layer` | `to_mac` | **Mac 기본 모드** (왼쪽 ⌥ Opt, ⌘ Cmd 및 대칭 엄지 배치) |
-| **Layer 4** | `mac_lower_layer` | 엄지 `MO 4` 홀드 | **Mac 보조 레이어** (F1~F12, 기호/편집키, 마우스 클릭) |
-| **Layer 5** | `mac_media_layer` | `mac_to_media` | **Mac 미디어 기본 모드** (엄지 MO 6 매핑) |
-| **Layer 6** | `mac_media_lower_layer` | 엄지 `MO 6` 홀드 | **Mac 미디어 Lower** (최신 macOS 밝기, Spotlight, 마이크 음성입력, 볼륨) |
-| **Layer 7** | `win_media_layer` | `win_to_media` | **Windows 미디어 기본 모드** (엄지 MO 8 매핑) |
-| **Layer 8** | `win_media_lower_layer` | 엄지 `MO 8` 홀드 | **Windows 미디어 Lower** (멀티미디어 제어 키 매핑) |
+| **Layer 3** | `mac_layer` | Lower `Cmd(50)` / 미디어 `B(41)` | **Mac 기본 모드** (왼쪽 ⌥ Opt, ⌘ Cmd 및 대칭 엄지 배치) |
+| **Layer 4** | `mac_lower_layer` | 엄지 `MO 4` 홀드 | **Mac 보조 레이어** (F1~F12, Alt:Win, Cmd:Mac, B:Media, 기호/편집키, 마우스, BT) |
+| **Layer 5** | `mac_media_layer` | Mac Lower에서 `B(41)` | **Mac 미디어 기본 모드** (엄지 MO 6 매핑) |
+| **Layer 6** | `mac_media_lower_layer` | 엄지 `MO 6` 홀드 | **Mac 미디어 Lower** (최신 macOS 밝기, Spotlight, 마이크, 음량, B:F키 복귀) |
+| **Layer 7** | `win_media_layer` | Windows Lower에서 `B(41)` | **Windows 미디어 기본 모드** (엄지 MO 8 매핑) |
+| **Layer 8** | `win_media_lower_layer` | 엄지 `MO 8` 홀드 | **Windows 미디어 Lower** (멀티미디어 제어 키 매핑, B:F키 복귀) |
 
 ### ③ 엄지 클러스터 배치
 - **Windows (`default_layer` / `win_media_layer`)**:
@@ -106,16 +106,16 @@
 - `F7` ~ `F9`: 이전 트랙 (`&kp C_PREV`), 재생/일시정지 (`&kp C_PP`), 다음 트랙 (`&kp C_NEXT`)
 - `F10` ~ `F12`: 음소거 (`&kp C_MUTE`), 볼륨 감소 (`&kp C_VOL_DN`), 볼륨 증가 (`&kp C_VOL_UP`)
 
-### ⑥ 콤보(Combos) 단축키 시스템
-엄지 `MO` 키를 누른 상태(Lower 레이어)에서 동시 입력:
-- **`X` + `S`**: Windows 기본 모드(`default_layer`) 전환
-- **`X` + `A`**: Mac 기본 모드(`mac_layer`) 전환
-- **`X` + `F`**: **현재 OS 내에서 F키 모드 ↔ 멀티미디어 모드 상호 토글**
+### ⑥ 모드 전환 및 시스템 조작 시스템
+엄지 `MO` 키를 누른 상태(Lower 레이어)에서 단일 전용 키 입력:
+- **`LALT(49번)`**: Windows 기본 모드(`default_layer`) 전환 (`&to 0`)
+- **`LGUI / Cmd(50번)`**: Mac 기본 모드(`mac_layer`) 전환 (`&to 3`)
+- **`B(41번)`**: **현재 OS 내에서 F키 모드 ↔ 멀티미디어 모드 상호 토글**
   - Windows F키(Layer 1) ➔ Windows 미디어(Layer 7)
   - Windows 미디어(Layer 8) ➔ Windows F키(Layer 0)
   - Mac F키(Layer 4) ➔ Mac 미디어(Layer 5)
   - Mac 미디어(Layer 6) ➔ Mac F키(Layer 3)
-- **`LCTRL(48)` + `5` + `6`**: 키보드 소프트 리셋 (`&sys_reset`)
+- **`LCTRL(48)` + `5` + `6` (콤보)**: 키보드 소프트 리셋 (`&sys_reset`)
 - **좌측 하단 `MO 2` + `5` or `6`**: USB 부트로더 진입 (`&bootloader`)
 
 ---

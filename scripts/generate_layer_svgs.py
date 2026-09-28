@@ -19,13 +19,13 @@ LAYER_METADATA = {
     "default_layer": {
         "file_name": "layer-0-default.svg",
         "title": "MODU-C Layer 0: Windows Default (F-Key Mode)",
-        "note": "Windows 기본 레이어 · 엄지 MO 1로 Lower 진입 · X+S(Win), X+A(Mac), X+F(Media)",
+        "note": "Windows 기본 레이어 · 엄지 MO 1로 Lower 진입 · Lower에서 Alt(Win), Cmd(Mac), B(Media)",
         "is_mac": False,
     },
     "lower_layer": {
         "file_name": "layer-1-lower.svg",
         "title": "MODU-C Layer 1: Windows Lower (F1~F12, Symbols, Mouse, Nav)",
-        "note": "엄지 MO 1 홀드 시 활성화 · F1~F12, 방향키, 넘패드/기호, 마우스 클릭(L/M/R-CLK), 블루투스 제어",
+        "note": "엄지 MO 1 홀드 시 활성화 · F1~F12, Alt(Win), Cmd(Mac), B(Media), 방향키, 넘패드/기호, 마우스, BT",
         "is_mac": False,
     },
     "layer_2": {
@@ -37,37 +37,37 @@ LAYER_METADATA = {
     "mac_layer": {
         "file_name": "layer-3-mac.svg",
         "title": "MODU-C Layer 3: Mac Default (F-Key Mode)",
-        "note": "Mac 기본 레이어 (Command ⌘, Option ⌥) · 엄지 MO 4로 Lower 진입 · X+S(Win), X+F(Media)",
+        "note": "Mac 기본 레이어 (Command ⌘, Option ⌥) · 엄지 MO 4로 Lower 진입 · Lower에서 Alt(Win), Cmd(Mac), B(Media)",
         "is_mac": True,
     },
     "mac_lower_layer": {
         "file_name": "layer-4-mac-lower.svg",
         "title": "MODU-C Layer 4: Mac Lower (F1~F12, Symbols, Mouse, Nav)",
-        "note": "엄지 MO 4 홀드 시 활성화 · F1~F12, 방향키, 기호, 마우스 클릭, 블루투스 제어",
+        "note": "엄지 MO 4 홀드 시 활성화 · F1~F12, Alt(Win), Cmd(Mac), B(Media), 방향키, 기호, 마우스, BT",
         "is_mac": True,
     },
     "mac_media_layer": {
         "file_name": "layer-5-mac-media.svg",
         "title": "MODU-C Layer 5: Mac Media Default",
-        "note": "Mac 미디어 기본 레이어 · 엄지 MO 6으로 미디어 보조 레이어 진입 · X+F로 F키 모드 복귀",
+        "note": "Mac 미디어 기본 레이어 · 엄지 MO 6으로 미디어 보조 레이어 진입 · Lower에서 B로 F키 복귀",
         "is_mac": True,
     },
     "mac_media_lower_layer": {
         "file_name": "layer-6-mac-media-lower.svg",
         "title": "MODU-C Layer 6: Mac Media Lower (Brightness, Spotlight, Voice, Media, Vol)",
-        "note": "엄지 MO 6 홀드 시 활성화 · 최신 macOS 표준 밝기, Spotlight, 받아쓰기, 미디어 및 음량 제어",
+        "note": "엄지 MO 6 홀드 시 활성화 · 최신 macOS 밝기/검색/음성/미디어, Alt(Win), Cmd(Mac), B(F-Key)",
         "is_mac": True,
     },
     "win_media_layer": {
         "file_name": "layer-7-win-media.svg",
         "title": "MODU-C Layer 7: Windows Media Default",
-        "note": "Windows 미디어 기본 레이어 · 엄지 MO 8로 미디어 보조 레이어 진입 · X+F로 F키 모드 복귀",
+        "note": "Windows 미디어 기본 레이어 · 엄지 MO 8로 미디어 보조 레이어 진입 · Lower에서 B로 F키 복귀",
         "is_mac": False,
     },
     "win_media_lower_layer": {
         "file_name": "layer-8-win-media-lower.svg",
         "title": "MODU-C Layer 8: Windows Media Lower (Media & System Controls)",
-        "note": "엄지 MO 8 홀드 시 활성화 · 밝기, 검색, 음성인식, 미디어 및 음량 제어",
+        "note": "엄지 MO 8 홀드 시 활성화 · 밝기, 검색, 음성인식, 미디어, Alt(Win), Cmd(Mac), B(F-Key)",
         "is_mac": False,
     },
 }
@@ -150,8 +150,19 @@ LABEL_MAP: dict[str, str] = {
 }
 
 
-def clean_label(binding: str, is_mac: bool = False) -> str:
+def clean_label(binding: str, is_mac: bool = False, layer_name: str = "", index: int = -1) -> str:
     """Format a ZMK binding into a clean, short SVG label."""
+    if binding == "&to 0":
+        if layer_name == "win_media_lower_layer" and index == 41:
+            return "F-KEY"
+        return "TO WIN"
+    if binding == "&to 3":
+        if layer_name == "mac_media_lower_layer" and index == 41:
+            return "F-KEY"
+        return "TO MAC"
+    if binding in ("&to 5", "&to 7"):
+        return "MEDIA"
+
     if binding in LABEL_MAP:
         label = LABEL_MAP[binding]
         if is_mac:
@@ -283,9 +294,9 @@ def generate_svg(
                 f'<rect class="none" x="{rx}" y="{ry}" width="{rw}" height="{rh}" rx="5"/>'
             )
         else:
-            label = clean_label(binding, is_mac=is_mac)
+            label = clean_label(binding, is_mac=is_mac, layer_name=layer_name, index=index)
 
-            if binding.startswith("&mo") or binding == "&studio_unlock" or binding.startswith("&out"):
+            if binding.startswith("&mo") or binding.startswith("&to") or binding == "&studio_unlock" or binding.startswith("&out"):
                 rect_class = "mo"
             elif binding == "&bootloader":
                 rect_class = "boot"

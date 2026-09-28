@@ -18,20 +18,15 @@
 / {
     /*
      * -------------------------------------------------------------------------
-     * 콤보(Combos) 설정 안내
+     * 시스템 콤보 및 Lower 전용 모드 전환 키 안내
      * -------------------------------------------------------------------------
-     * ZMK의 Combo 기능은 지정된 키들을 '동시에 눌렀을 때' 특정 동작을 실행합니다.
-     * 아래 콤보들은 엄지 MO 키를 누른 상태(Lower 레이어 활성화)에서 손가락으로
-     * 해당 키들을 함께 누르면 작동하도록 layers 속성이 지정되어 있습니다.
+     * [Lower 레이어 전용 모드 전환 키 (엄지 MO 누른 상태)]
+     * - 49번 (Row 4 LALT 자리): &to 0 -> Windows 기본 모드 (F키 모드)
+     * - 50번 (Row 4 LGUI 자리): &to 3 -> Mac 기본 모드 (F키 모드)
+     * - 41번 (Row 3 B 자리)   : 현재 OS 내에서 F키 모드 ↔ 멀티미디어 키 모드 상호 토글
      *
-     * [키 포지션 번호 매핑 참고]
-     * - 5번: Row 0의 '5' 키
-     * - 6번: Row 0의 '6' 키
-     * - 25번: Row 2의 'A' 키
-     * - 26번: Row 2의 'S' 키
-     * - 28번: Row 2의 'F' 키
-     * - 38번: Row 3의 'X' 키
-     * - 48번: Row 4의 'LCTRL' 키
+     * [콤보(Combos) 안내]
+     * - 시스템 소프트 리셋: 엄지 MO 누른 채 LCTRL(48) + 5 + 6 동시 입력
      * -------------------------------------------------------------------------
      */
 
@@ -39,59 +34,10 @@
         compatible = "zmk,combos";
 
         // [시스템 리셋] 엄지 MO 누른 채: LCTRL(48) + 5 + 6 키 동시 입력 -> 키보드 소프트 재부팅
-
         reset {
             bindings = <&sys_reset>;
             key-positions = <48 5 6>;
             layers = <1 4 6 8>; // 모든 Lower 레이어에서 작동
-        };
-
-        // [Windows 기본 모드 전환] 엄지 MO 누른 채: X(38) + S(26) -> Layer 0 (Windows F키 모드) 전환
-
-        to_win {
-            bindings = <&to 0>;
-            key-positions = <26 38>;
-            layers = <1 4 6 8>; // 모든 Lower 레이어에서 작동
-        };
-
-        // [Mac 기본 모드 전환] 엄지 MO 누른 채: X(38) + A(25) -> Layer 3 (Mac F키 모드) 전환
-
-        to_mac {
-            bindings = <&to 3>;
-            key-positions = <25 38>;
-            layers = <1 4 6 8>; // 모든 Lower 레이어에서 작동
-        };
-
-        // [Windows 미디어 모드 전환] Windows F키 모드에서 엄지 MO 누른 채: X(38) + F(28) -> Layer 7 (Windows 미디어 모드) 전환
-
-        win_to_media {
-            bindings = <&to 7>;
-            key-positions = <28 38>;
-            layers = <1>; // Windows F키 Lower(Layer 1)에서만 작동
-        };
-
-        // [Windows F키 모드 복귀] Windows 미디어 모드에서 엄지 MO 누른 채: X(38) + F(28) -> Layer 0 (Windows F키 모드) 복귀
-
-        win_to_func {
-            bindings = <&to 0>;
-            key-positions = <28 38>;
-            layers = <8>; // Windows 미디어 Lower(Layer 8)에서만 작동
-        };
-
-        // [Mac 미디어 모드 전환] Mac F키 모드에서 엄지 MO 누른 채: X(38) + F(28) -> Layer 5 (Mac 미디어 모드) 전환
-
-        mac_to_media {
-            bindings = <&to 5>;
-            key-positions = <28 38>;
-            layers = <4>; // Mac F키 Lower(Layer 4)에서만 작동
-        };
-
-        // [Mac F키 모드 복귀] Mac 미디어 모드에서 엄지 MO 누른 채: X(38) + F(28) -> Layer 3 (Mac F키 모드) 복귀
-
-        mac_to_func {
-            bindings = <&to 3>;
-            key-positions = <28 38>;
-            layers = <6>; // Mac 미디어 Lower(Layer 6)에서만 작동
         };
     };
 
@@ -122,8 +68,8 @@
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5  &kp F6  &kp F7     &kp F8         &kp F9     &kp F10    &kp F11   &kp F12
 &kp GRAVE   &kp HOME      &kp UP        &kp END       &kp PG_UP   &kp LC(INS) &mkp MCLK  &kp GRAVE      &kp MINUS  &kp EQUAL  &trans    &trans
 &trans      &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN   &kp LS(INS) &mkp RCLK  &kp LG(LS(S))  &kp LBKT   &kp RBKT   &kp SQT   &kp ENTER
-&kp LSHFT   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &mkp LCLK  &kp PSCRN      &trans     &trans     &kp BSLH  &kp RIGHT_SHIFT
-&mo 2       &trans        &trans        &trans        &trans  &trans  &trans     &trans         &trans     &trans     &kp INS   &kp DEL
+&kp LSHFT   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &to 7   &mkp LCLK  &kp PSCRN      &trans     &trans     &kp BSLH  &kp RIGHT_SHIFT
+&mo 2       &to 0         &to 3         &trans        &trans  &trans  &trans     &trans         &trans     &trans     &kp INS   &kp DEL
 &trans      &trans        &trans                                      &kp ENTER  &kp BACKSPACE  &trans     &trans
             >;
         };
@@ -161,8 +107,8 @@
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5  &kp F6  &kp F7     &kp F8         &kp F9     &kp F10    &kp F11   &kp F12
 &kp GRAVE   &kp HOME      &kp UP        &kp END       &kp PG_UP &kp LG(C) &mkp MCLK  &kp GRAVE      &kp MINUS  &kp EQUAL  &trans    &trans
 &trans      &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN &kp LG(V) &mkp RCLK  &kp LG(LS(N4)) &kp LBKT   &kp RBKT   &kp SQT   &kp ENTER
-&kp LSHFT   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &mkp LCLK  &kp PSCRN      &trans     &trans     &kp BSLH  &kp RIGHT_SHIFT
-&mo 2       &trans        &trans        &trans        &trans  &trans  &trans     &trans         &trans     &trans     &kp INS   &kp DEL
+&kp LSHFT   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &to 5   &mkp LCLK  &kp PSCRN      &trans     &trans     &kp BSLH  &kp RIGHT_SHIFT
+&mo 2       &to 0         &to 3         &trans        &trans  &trans  &trans     &trans         &trans     &trans     &kp INS   &kp DEL
 &trans      &trans        &trans                                      &kp ENTER  &kp BACKSPACE  &trans     &trans
             >;
         };
@@ -186,8 +132,8 @@
 &kp C_BRI_DN  &kp C_BRI_UP  &kp F3        &kp C_AC_SEARCH  &kp C_VOICE_COMMAND  &kp F6  &kp C_PREV  &kp C_PP       &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
 &kp GRAVE     &kp HOME      &kp UP        &kp END          &kp PG_UP            &kp LG(C)  &mkp MCLK   &kp GRAVE      &kp MINUS   &kp EQUAL   &trans        &trans
 &trans        &kp LEFT      &kp DOWN      &kp RIGHT        &kp PG_DN            &kp LG(V)  &mkp RCLK   &kp LG(LS(N4)) &kp LBKT    &kp RBKT    &kp SQT       &kp ENTER
-&kp LSHFT     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &trans  &mkp LCLK   &kp PSCRN      &trans      &trans      &kp BSLH      &kp RIGHT_SHIFT
-&mo 2         &trans        &trans        &trans           &trans               &trans  &trans      &trans         &trans      &trans      &kp INS       &kp DEL
+&kp LSHFT     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &to 3   &mkp LCLK   &kp PSCRN      &trans      &trans      &kp BSLH      &kp RIGHT_SHIFT
+&mo 2         &to 0         &to 3         &trans           &trans               &trans  &trans      &trans         &trans      &trans      &kp INS       &kp DEL
 &trans        &trans        &trans                                                      &kp ENTER   &kp BACKSPACE  &trans      &trans
             >;
         };
@@ -211,8 +157,8 @@
 &kp C_BRI_DN  &kp C_BRI_UP  &kp F3        &kp C_AC_SEARCH  &kp C_VOICE_COMMAND  &kp F6  &kp C_PREV  &kp C_PP       &kp C_NEXT  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
 &kp GRAVE     &kp HOME      &kp UP        &kp END          &kp PG_UP            &kp LC(INS)    &mkp MCLK   &kp GRAVE      &kp MINUS   &kp EQUAL   &trans        &trans
 &trans        &kp LEFT      &kp DOWN      &kp RIGHT        &kp PG_DN            &kp LS(INS)    &mkp RCLK   &kp LG(LS(S))  &kp LBKT    &kp RBKT    &kp SQT       &kp ENTER
-&kp LSHFT     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &trans  &mkp LCLK   &kp PSCRN      &trans      &trans      &kp BSLH      &kp RIGHT_SHIFT
-&mo 2         &trans        &trans        &trans           &trans               &trans  &trans      &trans         &trans      &trans      &kp INS       &kp DEL
+&kp LSHFT     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &trans               &to 0   &mkp LCLK   &kp PSCRN      &trans      &trans      &kp BSLH      &kp RIGHT_SHIFT
+&mo 2         &to 0         &to 3         &trans           &trans               &trans  &trans      &trans         &trans      &trans      &kp INS       &kp DEL
 &trans        &trans        &trans                                                      &kp ENTER   &kp BACKSPACE  &trans      &trans
             >;
         };
