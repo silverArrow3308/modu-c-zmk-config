@@ -87,12 +87,12 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label-trans" x="631.5" y="183.5">▽</text>
 <rect class="trans" x="662.0" y="156.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="689.5" y="183.5">▽</text>
-<rect class="trans" x="720.0" y="156.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="747.5" y="183.5">▽</text>
+<rect class="key" x="720.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="747.5" y="183.5">'</text>
 <rect class="key" x="778.0" y="156.0" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="805.5" y="183.5">'</text>
+<text class="label" x="805.5" y="183.5">RET</text>
 <rect class="key" x="24.0" y="214.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-sm" x="51.5" y="241.5">BT CLR</text>
+<text class="label" x="51.5" y="241.5">LSFT</text>
 <rect class="key" x="82.0" y="214.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="109.5" y="241.5">BT 1</text>
 <rect class="key" x="140.0" y="214.0" width="55.0" height="55.0" rx="5"/>
@@ -111,10 +111,10 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label-trans" x="631.5" y="241.5">▽</text>
 <rect class="trans" x="662.0" y="214.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="689.5" y="241.5">▽</text>
-<rect class="trans" x="720.0" y="214.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="747.5" y="241.5">▽</text>
+<rect class="key" x="720.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="747.5" y="241.5">\</text>
 <rect class="key" x="778.0" y="214.0" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="805.5" y="241.5">\</text>
+<text class="label" x="805.5" y="241.5">RSFT</text>
 <rect class="mo" x="24.0" y="272.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="51.5" y="299.5">MO 2</text>
 <rect class="trans" x="82.0" y="272.0" width="55.0" height="55.0" rx="5"/>
