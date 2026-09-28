@@ -13,7 +13,7 @@ text{font-family:Arial,sans-serif;fill:#111}
 .label-sm{font-size:9.5px;text-anchor:middle;dominant-baseline:middle}
 .label-trans{font-size:10px;text-anchor:middle;dominant-baseline:middle;fill:#aaa}
 </style>
-<text x="24" y="18" class="title">MODU-C Layer 2: Bootloader (UF2 Firmware Flashing)</text>
+<text x="24" y="18" class="title">MODU-C Layer 2: Bootloader &amp; Studio (Firmware &amp; Config)</text>
 <rect class="trans" x="24.0" y="40.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="51.5" y="67.5">▽</text>
 <rect class="trans" x="82.0" y="40.0" width="55.0" height="55.0" rx="5"/>
@@ -46,10 +46,10 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label-trans" x="167.5" y="125.5">▽</text>
 <rect class="trans" x="198.0" y="98.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="225.5" y="125.5">▽</text>
-<rect class="trans" x="256.0" y="98.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="283.5" y="125.5">▽</text>
-<rect class="trans" x="314.0" y="98.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="341.5" y="125.5">▽</text>
+<rect class="mo" x="256.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-sm" x="283.5" y="125.5">Studio</text>
+<rect class="mo" x="314.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-sm" x="341.5" y="125.5">USB Out</text>
 <rect class="trans" x="488.0" y="98.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="515.5" y="125.5">▽</text>
 <rect class="trans" x="546.0" y="98.0" width="55.0" height="55.0" rx="5"/>
@@ -142,5 +142,5 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label-trans" x="631.5" y="372.0">▽</text>
 <rect class="trans" x="662.0" y="344.5" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="689.5" y="372.0">▽</text>
-<text x="24" y="411" class="note">Lower 상태에서 좌측 하단 MO 2 + 5 또는 6번 키를 누르면 부트로더(UF2 드라이브)로 진입합니다.</text>
+<text x="24" y="411" class="note">Lower 상태에서 좌측 하단 MO 2 + 5/6(Bootloader), R(Studio Unlock), T(USB Out)</text>
 </svg>

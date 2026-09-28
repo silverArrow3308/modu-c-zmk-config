@@ -30,8 +30,8 @@ LAYER_METADATA = {
     },
     "layer_2": {
         "file_name": "layer-2-bootloader.svg",
-        "title": "MODU-C Layer 2: Bootloader (UF2 Firmware Flashing)",
-        "note": "Lower 상태에서 좌측 하단 MO 2 + 5 또는 6번 키를 누르면 부트로더(UF2 드라이브)로 진입합니다.",
+        "title": "MODU-C Layer 2: Bootloader & Studio (Firmware & Config)",
+        "note": "Lower 상태에서 좌측 하단 MO 2 + 5/6(Bootloader), R(Studio Unlock), T(USB Out)",
         "is_mac": False,
     },
     "mac_layer": {
@@ -74,6 +74,8 @@ LAYER_METADATA = {
 
 LABEL_MAP: dict[str, str] = {
     "&bootloader": "BOOT",
+    "&studio_unlock": "Studio",
+    "&out OUT_USB": "USB Out",
     "&bt BT_CLR": "BT CLR",
     "&bt BT_SEL 0": "BT 1",
     "&bt BT_SEL 1": "BT 2",
@@ -283,7 +285,7 @@ def generate_svg(
         else:
             label = clean_label(binding, is_mac=is_mac)
 
-            if binding.startswith("&mo"):
+            if binding.startswith("&mo") or binding == "&studio_unlock" or binding.startswith("&out"):
                 rect_class = "mo"
             elif binding == "&bootloader":
                 rect_class = "boot"
