@@ -50,8 +50,9 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="225.5" y="125.5">END</text>
 <rect class="key" x="256.0" y="98.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="283.5" y="125.5">PG-UP</text>
-<rect class="trans" x="314.0" y="98.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="341.5" y="125.5">▽</text>
+<rect class="key" x="314.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-multi-1" x="341.5" y="118.0">COPY</text>
+<text class="label-multi-2" x="341.5" y="134.0">Cmd+C</text>
 <rect class="key" x="488.0" y="98.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="515.5" y="125.5">M-CLK</text>
 <rect class="key" x="546.0" y="98.0" width="55.0" height="55.0" rx="5"/>
@@ -74,8 +75,9 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="225.5" y="183.5">RIGHT</text>
 <rect class="key" x="256.0" y="156.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="283.5" y="183.5">PG-DN</text>
-<rect class="trans" x="314.0" y="156.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="341.5" y="183.5">▽</text>
+<rect class="key" x="314.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-multi-1" x="341.5" y="176.0">PASTE</text>
+<text class="label-multi-2" x="341.5" y="192.0">Cmd+V</text>
 <rect class="key" x="488.0" y="156.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="515.5" y="183.5">R-CLK</text>
 <rect class="key" x="546.0" y="156.0" width="55.0" height="55.0" rx="5"/>

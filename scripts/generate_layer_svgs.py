@@ -124,6 +124,8 @@ LABEL_MAP: dict[str, str] = {
     "&kp LS(INS)": "PASTE\nShift+Ins",
     "&kp LC(INSERT)": "COPY\nCtrl+Ins",
     "&kp LS(INSERT)": "PASTE\nShift+Ins",
+    "&kp LG(C)": "COPY\nCmd+C",
+    "&kp LG(V)": "PASTE\nCmd+V",
     "&kp PG_UP": "PG-UP",
     "&kp PG_DN": "PG-DN",
     "&kp PAGE_UP": "PG-UP",

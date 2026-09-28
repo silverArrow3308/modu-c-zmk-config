@@ -101,7 +101,8 @@
 [Row 5 엄지]  [Windows] 좌측: Backspace (&kp BACKSPACE) | Space (&kp SPACE) | Lower (&mo 1 / &mo 8)
                         우측: Lower (&mo 1 / &mo 8)     | Space (&kp SPACE) | Backspace (&kp BACKSPACE) | B
               [Mac]     좌측: 한/영 (&kp LANG1)          | Space (&kp SPACE) | Lower (&mo 4 / &mo 6)
-                        우측: Lower (&mo 4 / &mo 6)     | Space (&kp SPACE) | Delete (&kp DELETE) | B
+                        우측: Lower (&mo 4 / &mo 6)     | Space (&kp SPACE) | Backspace (&kp BACKSPACE) | B
+*(참고: Windows 및 Mac 모두 우측 상단 끝은 `Delete (&kp DELETE)`, 우측 엄지 3번째 키는 `Backspace (&kp BACKSPACE)`로 동일하게 통일)*
 ```
 
 ---
@@ -123,8 +124,8 @@
 | **구역 캡처 (원키)** | **`J`** 자리 (`R-CLK` 바로 옆) | **`Win+Shift+S`** (Mac: `Cmd+Shift+4`) | **화면 구역(영역) 캡처 도구 단일키 실행** (`&kp LG(LS(S))` / `&kp LG(LS(N4))`) |
 | **페이지 업** | **`R`** 자리 (`END` 바로 오른쪽) | **`PG_UP`** (Page Up) | 한 화면 위로 스크롤 |
 | **페이지 다운** | **`F`** 자리 (`PG_UP` 바로 아래) | **`PG_DN`** (Page Down) | 한 화면 아래로 스크롤 |
-| **복사 (Ctrl+Ins)** | **`T`** 자리 (`PG_UP` 바로 오른쪽) | **`Ctrl + Insert`** (`&kp LC(INS)`) | 윈도우 표준 복사 단축키 (터미널/에디터 원키 복사, SVG: `COPY / Ctrl+Ins`) |
-| **붙여넣기 (Shift+Ins)**| **`G`** 자리 (`복사` 바로 아래) | **`Shift + Insert`** (`&kp LS(INS)`) | 윈도우 표준 붙여넣기 단축키 (터미널/에디터 원키 붙여넣기, SVG: `PASTE / Shift+Ins`) |
+| **복사 (Ctrl+Ins / Cmd+C)** | **`T`** 자리 (`PG_UP` 바로 오른쪽) | **`Ctrl + Insert`** (`&kp LC(INS)`) / Mac: **`Cmd + C`** (`&kp LG(C)`) | 표준 복사 단축키 (터미널/에디터 원키 복사, SVG: `COPY / Ctrl+Ins` 또는 `Cmd+C`) |
+| **붙여넣기 (Shift+Ins / Cmd+V)**| **`G`** 자리 (`복사` 바로 아래) | **`Shift + Insert`** (`&kp LS(INS)`) / Mac: **`Cmd + V`** (`&kp LG(V)`) | 표준 붙여넣기 단축키 (터미널/에디터 원키 붙여넣기, SVG: `PASTE / Shift+Ins` 또는 `Cmd+V`) |
 | **인서트** | **`RCTRL`** 자리 | **`INS`** (Insert) | 문서 삽입 모드 |
 | **딜리트** | **`INSERT`** 자리 | **`DEL`** (Delete) | 우측 하단 끝 Del 키 (기본 레이어 엄지에도 Delete 지원) |
 
@@ -139,8 +140,8 @@
   - `M` 자리: **전체 화면 캡처** (`PSCRN`) — **구역 캡처(J) 바로 아래 배치!**
   - `N` 자리: **좌클릭** (`&mkp LCLK`)
 - **방향키, 네비게이션 & 빠른 클립보드 (왼손 완성형 클러스터)**:
-  - Row 1: `HOME (Q)` | `UP (W)` | `END (E)` | **`PG_UP (R)`** | **`Ctrl+Ins (T)`**
-  - Row 2: `LEFT (A)` | `DOWN (S)` | `RIGHT (D)` | **`PG_DN (F)`** | **`Shift+Ins (G)`**
+  - Row 1: `HOME (Q)` | `UP (W)` | `END (E)` | **`PG_UP (R)`** | **`복사: Ctrl+Ins / Cmd+C (T)`**
+  - Row 2: `LEFT (A)` | `DOWN (S)` | `RIGHT (D)` | **`PG_DN (F)`** | **`붙여넣기: Shift+Ins / Cmd+V (G)`**
   - 상하 수직 페어링: Page Up / Page Down (R / F 열), 복사 / 붙여넣기 (T / G 열) 배치!
 - **블루투스 페어링 제어**:
   - `BT_CLR` (페어링 초기화), `BT_SEL 0`, `BT_SEL 1`, `BT_SEL 2` (프로파일 1~3번 선택)

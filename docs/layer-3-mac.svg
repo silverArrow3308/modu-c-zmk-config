@@ -37,7 +37,7 @@ text{font-family:Arial,sans-serif;fill:#111}
 <rect class="key" x="720.0" y="40.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="747.5" y="67.5">0</text>
 <rect class="key" x="778.0" y="40.0" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="805.5" y="67.5">BSPC</text>
+<text class="label" x="805.5" y="67.5">DEL</text>
 <rect class="key" x="24.0" y="98.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="51.5" y="125.5">TAB</text>
 <rect class="key" x="82.0" y="98.0" width="55.0" height="55.0" rx="5"/>
@@ -139,7 +139,7 @@ text{font-family:Arial,sans-serif;fill:#111}
 <rect class="key" x="546.0" y="344.5" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="573.5" y="372.0">SPACE</text>
 <rect class="key" x="604.0" y="344.5" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="631.5" y="372.0">DEL</text>
+<text class="label" x="631.5" y="372.0">BSPC</text>
 <rect class="key" x="662.0" y="344.5" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="689.5" y="372.0">B</text>
 <text x="24" y="411" class="note">Mac 기본 레이어 (Command ⌘, Option ⌥) · 엄지 MO 4로 Lower 진입 · X+S(Win), X+F(Media)</text>

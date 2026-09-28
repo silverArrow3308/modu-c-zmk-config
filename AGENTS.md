@@ -79,7 +79,8 @@
   - *(참고: 우측 상단 끝은 `[Delete (&kp DELETE)]`, Row 4의 RALT 자리는 `[한/영 (&kp LANG1)]`)*
 - **Mac (`mac_layer` / `mac_media_layer`)**:
   - 좌측 엄지: `[한/영 (&kp LANG1)]` | `[Space]` | `[Lower (&mo 4 / &mo 6)]`
-  - 우측 엄지: `[Lower (&mo 4 / &mo 6)]` | `[Space]` | `[Delete (&kp DELETE)]` | `[B]`
+  - 우측 엄지: `[Lower (&mo 4 / &mo 6)]` | `[Space]` | `[Backspace (&kp BACKSPACE)]` | `[B]`
+  - *(참고: 우측 상단 끝은 `[Delete (&kp DELETE)]`)*
 
 ### ④ Lower 레이어 표준 기호 및 마우스 포인팅 매핑
 - **오른손 상단 기호 연속열**:
