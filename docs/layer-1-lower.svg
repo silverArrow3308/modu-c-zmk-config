@@ -11,6 +11,8 @@ text{font-family:Arial,sans-serif;fill:#111}
 .note{font-size:12px;fill:#555}
 .label{font-size:11px;text-anchor:middle;dominant-baseline:middle}
 .label-sm{font-size:9.5px;text-anchor:middle;dominant-baseline:middle}
+.label-multi-1{font-size:10px;font-weight:700;text-anchor:middle;dominant-baseline:middle}
+.label-multi-2{font-size:7.5px;text-anchor:middle;dominant-baseline:middle;fill:#444}
 .label-trans{font-size:10px;text-anchor:middle;dominant-baseline:middle;fill:#aaa}
 </style>
 <text x="24" y="18" class="title">MODU-C Layer 1: Windows Lower (F1~F12, Symbols, Mouse, Nav)</text>
@@ -49,7 +51,8 @@ text{font-family:Arial,sans-serif;fill:#111}
 <rect class="key" x="256.0" y="98.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="283.5" y="125.5">PG-UP</text>
 <rect class="key" x="314.0" y="98.0" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="341.5" y="125.5">C-INS</text>
+<text class="label-multi-1" x="341.5" y="118.0">COPY</text>
+<text class="label-multi-2" x="341.5" y="134.0">Ctrl+Ins</text>
 <rect class="key" x="488.0" y="98.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="515.5" y="125.5">M-CLK</text>
 <rect class="key" x="546.0" y="98.0" width="55.0" height="55.0" rx="5"/>
@@ -73,11 +76,13 @@ text{font-family:Arial,sans-serif;fill:#111}
 <rect class="key" x="256.0" y="156.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="283.5" y="183.5">PG-DN</text>
 <rect class="key" x="314.0" y="156.0" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="341.5" y="183.5">S-INS</text>
+<text class="label-multi-1" x="341.5" y="176.0">PASTE</text>
+<text class="label-multi-2" x="341.5" y="192.0">Shift+Ins</text>
 <rect class="key" x="488.0" y="156.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="515.5" y="183.5">R-CLK</text>
 <rect class="key" x="546.0" y="156.0" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="573.5" y="183.5">SNIP</text>
+<text class="label-multi-1" x="573.5" y="176.0">SNIP</text>
+<text class="label-multi-2" x="573.5" y="192.0">Win+Shift+S</text>
 <rect class="trans" x="604.0" y="156.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="631.5" y="183.5">▽</text>
 <rect class="trans" x="662.0" y="156.0" width="55.0" height="55.0" rx="5"/>
@@ -100,8 +105,8 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label-trans" x="341.5" y="241.5">▽</text>
 <rect class="key" x="488.0" y="214.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="515.5" y="241.5">L-CLK</text>
-<rect class="trans" x="546.0" y="214.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="573.5" y="241.5">▽</text>
+<rect class="key" x="546.0" y="214.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="573.5" y="241.5">PSCRN</text>
 <rect class="trans" x="604.0" y="214.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="631.5" y="241.5">▽</text>
 <rect class="trans" x="662.0" y="214.0" width="55.0" height="55.0" rx="5"/>
@@ -122,8 +127,8 @@ text{font-family:Arial,sans-serif;fill:#111}
 <rect class="none" x="414.9" y="294.0" width="9.8" height="9.8" rx="5"/>
 <rect class="none" x="437.0" y="294.0" width="9.8" height="9.8" rx="5"/>
 <rect class="none" x="459.0" y="294.0" width="9.8" height="9.8" rx="5"/>
-<rect class="key" x="662.0" y="272.0" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="689.5" y="299.5">PSCRN</text>
+<rect class="trans" x="662.0" y="272.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="689.5" y="299.5">▽</text>
 <rect class="key" x="720.0" y="272.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="747.5" y="299.5">INS</text>
 <rect class="key" x="778.0" y="272.0" width="55.0" height="55.0" rx="5"/>

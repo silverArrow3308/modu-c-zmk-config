@@ -62,7 +62,7 @@
 ### ② 9개 레이어 구조 분석
 | 레이어 | 이름 | 진입 방식 | 주요 역할 및 특징 |
 | :---: | :--- | :--- | :--- |
-| **Layer 0** | `default_layer` | 기본값 / `to_win` | **Windows 기본 모드** (우상단 Backspace, 엄지 한/영, Space, MO 1, Delete) |
+| **Layer 0** | `default_layer` | 기본값 / `to_win` | **Windows 기본 모드** (우상단 Delete, RALT 자리 한/영, 양손 엄지 MO 1, 우측 엄지 Backspace) |
 | **Layer 1** | `lower_layer` | 엄지 `MO 1` 홀드 | **Windows 보조 레이어** (F1~F12, 표준 기호열, 방향키, 마우스 클릭, BT 제어) |
 | **Layer 2** | `layer_2` | Lower에서 `MO 2` 홀드 | **부트로더 레이어** (5, 6번 누르면 UF2 펌웨어 플래싱 모드 진입) |
 | **Layer 3** | `mac_layer` | `to_mac` | **Mac 기본 모드** (왼쪽 ⌥ Opt, ⌘ Cmd 및 대칭 엄지 배치) |
@@ -75,7 +75,8 @@
 ### ③ 엄지 클러스터 배치
 - **Windows (`default_layer` / `win_media_layer`)**:
   - 좌측 엄지: `[Backspace (&kp BACKSPACE)]` | `[Space]` | `[Lower (&mo 1 / &mo 8)]`
-  - 우측 엄지: `[한/영 (&kp LANG1)]` | `[Space]` | `[Delete (&kp DELETE)]` | `[B]`
+  - 우측 엄지: `[Lower (&mo 1 / &mo 8)]` | `[Space]` | `[Backspace (&kp BACKSPACE)]` | `[B]`
+  - *(참고: 우측 상단 끝은 `[Delete (&kp DELETE)]`, Row 4의 RALT 자리는 `[한/영 (&kp LANG1)]`)*
 - **Mac (`mac_layer` / `mac_media_layer`)**:
   - 좌측 엄지: `[한/영 (&kp LANG1)]` | `[Space]` | `[Lower (&mo 4 / &mo 6)]`
   - 우측 엄지: `[Lower (&mo 4 / &mo 6)]` | `[Space]` | `[Delete (&kp DELETE)]` | `[B]`

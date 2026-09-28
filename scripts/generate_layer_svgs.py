@@ -118,12 +118,12 @@ LABEL_MAP: dict[str, str] = {
     "&mkp LCLK": "L-CLK",
     "&mkp MCLK": "M-CLK",
     "&mkp RCLK": "R-CLK",
-    "&kp LG(LS(S))": "SNIP",
-    "&kp LG(LS(N4))": "SNIP",
-    "&kp LC(INS)": "C-INS",
-    "&kp LS(INS)": "S-INS",
-    "&kp LC(INSERT)": "C-INS",
-    "&kp LS(INSERT)": "S-INS",
+    "&kp LG(LS(S))": "SNIP\nWin+Shift+S",
+    "&kp LG(LS(N4))": "SNIP\nCmd+Shift+4",
+    "&kp LC(INS)": "COPY\nCtrl+Ins",
+    "&kp LS(INS)": "PASTE\nShift+Ins",
+    "&kp LC(INSERT)": "COPY\nCtrl+Ins",
+    "&kp LS(INSERT)": "PASTE\nShift+Ins",
     "&kp PG_UP": "PG-UP",
     "&kp PG_DN": "PG-DN",
     "&kp PAGE_UP": "PG-UP",
@@ -237,6 +237,8 @@ def generate_svg(
         ".note{font-size:12px;fill:#555}",
         ".label{font-size:11px;text-anchor:middle;dominant-baseline:middle}",
         ".label-sm{font-size:9.5px;text-anchor:middle;dominant-baseline:middle}",
+        ".label-multi-1{font-size:10px;font-weight:700;text-anchor:middle;dominant-baseline:middle}",
+        ".label-multi-2{font-size:7.5px;text-anchor:middle;dominant-baseline:middle;fill:#444}",
         ".label-trans{font-size:10px;text-anchor:middle;dominant-baseline:middle;fill:#aaa}",
         "</style>",
         f'<text x="24" y="18" class="title">{esc_title}</text>',
@@ -278,13 +280,6 @@ def generate_svg(
             )
         else:
             label = clean_label(binding, is_mac=is_mac)
-            # Escape XML special characters
-            escaped_label = (
-                label.replace("&", "&amp;")
-                .replace("<", "&lt;")
-                .replace(">", "&gt;")
-                .replace('"', "&quot;")
-            )
 
             if binding.startswith("&mo"):
                 rect_class = "mo"
@@ -296,10 +291,38 @@ def generate_svg(
             lines.append(
                 f'<rect class="{rect_class}" x="{rx}" y="{ry}" width="{rw}" height="{rh}" rx="5"/>'
             )
-            label_class = "label-sm" if len(label) > 5 else "label"
-            lines.append(
-                f'<text class="{label_class}" x="{lx}" y="{ly}">{escaped_label}</text>'
-            )
+
+            if "\n" in label:
+                line1, line2 = label.split("\n", 1)
+                e1 = (
+                    line1.replace("&", "&amp;")
+                    .replace("<", "&lt;")
+                    .replace(">", "&gt;")
+                    .replace('"', "&quot;")
+                )
+                e2 = (
+                    line2.replace("&", "&amp;")
+                    .replace("<", "&lt;")
+                    .replace(">", "&gt;")
+                    .replace('"', "&quot;")
+                )
+                lines.append(
+                    f'<text class="label-multi-1" x="{lx}" y="{round(ly - 7.5, 1)}">{e1}</text>'
+                )
+                lines.append(
+                    f'<text class="label-multi-2" x="{lx}" y="{round(ly + 8.5, 1)}">{e2}</text>'
+                )
+            else:
+                escaped_label = (
+                    label.replace("&", "&amp;")
+                    .replace("<", "&lt;")
+                    .replace(">", "&gt;")
+                    .replace('"', "&quot;")
+                )
+                label_class = "label-sm" if len(label) > 5 else "label"
+                lines.append(
+                    f'<text class="{label_class}" x="{lx}" y="{ly}">{escaped_label}</text>'
+                )
 
     lines.append(f'<text x="24" y="411" class="note">{esc_note}</text>')
     lines.append("</svg>\n")

@@ -96,11 +96,12 @@
 
 ```
 [Row 4 좌측]  Control (^, &kp LCTRL)  |  Option (⌥, &kp LALT)  |  Command (⌘, &kp LGUI)
-[Row 4 우측]  Command (⌘, &kp RGUI)   |  Control (^, &kp RCTRL)|  Insert (&kp INSERT)
+[Row 4 우측]  [Windows] 한/영 (&kp LANG1)        |  Control (^, &kp RCTRL)|  Insert (&kp INSERT)
+              [Mac]     Command (⌘, &kp RGUI)    |  Control (^, &kp RCTRL)|  Insert (&kp INSERT)
 [Row 5 엄지]  [Windows] 좌측: Backspace (&kp BACKSPACE) | Space (&kp SPACE) | Lower (&mo 1 / &mo 8)
-                        우측: 한/영 (&kp LANG1) | Space (&kp SPACE) | Delete (&kp DELETE) | B
-              [Mac]     좌측: 한/영 (&kp LANG1) | Space (&kp SPACE) | Lower (&mo 4 / &mo 6)
-                        우측: Lower (&mo 4 / &mo 6) | Space (&kp SPACE) | Delete (&kp DELETE) | B
+                        우측: Lower (&mo 1 / &mo 8)     | Space (&kp SPACE) | Backspace (&kp BACKSPACE) | B
+              [Mac]     좌측: 한/영 (&kp LANG1)          | Space (&kp SPACE) | Lower (&mo 4 / &mo 6)
+                        우측: Lower (&mo 4 / &mo 6)     | Space (&kp SPACE) | Delete (&kp DELETE) | B
 ```
 
 ---
@@ -118,12 +119,12 @@
 | **대괄호 닫기** | **`\` (`BSLH`)** 자리 | **`]` / `}`** (`&kp RBKT`) | 대괄호 열기 바로 오른쪽 (Row 1 끝) |
 | **따옴표** | **`ENTER`** 자리 | **`'` / `"`** (`&kp SQT`) | **세미콜론(`;`) 바로 오른쪽!** 표준 따옴표 손 위치 일치 |
 | **역슬래시** | **`RSHFT`** 자리 | **`\` / `\|`** (`&kp BSLH`) | 따옴표 바로 아래 (Row 3 끝) |
-| **스크린샷** | **`RALT`** 자리 | **`PSCRN`** (Print Screen) | 윈도우 전체 스크린샷 캡처 |
+| **전체 화면 캡처** | **`M`** 자리 (`SNIP` 바로 아래) | **`PSCRN`** (Print Screen) | 전체 화면 스크린샷 캡처 (구역 캡처 J키 바로 아래 배치) |
 | **구역 캡처 (원키)** | **`J`** 자리 (`R-CLK` 바로 옆) | **`Win+Shift+S`** (Mac: `Cmd+Shift+4`) | **화면 구역(영역) 캡처 도구 단일키 실행** (`&kp LG(LS(S))` / `&kp LG(LS(N4))`) |
 | **페이지 업** | **`R`** 자리 (`END` 바로 오른쪽) | **`PG_UP`** (Page Up) | 한 화면 위로 스크롤 |
 | **페이지 다운** | **`F`** 자리 (`PG_UP` 바로 아래) | **`PG_DN`** (Page Down) | 한 화면 아래로 스크롤 |
-| **복사 (Ctrl+Ins)** | **`T`** 자리 (`PG_UP` 바로 오른쪽) | **`Ctrl + Insert`** (`&kp LC(INS)`) | 윈도우 표준 복사 단축키 (터미널/에디터 원키 복사) |
-| **붙여넣기 (Shift+Ins)**| **`G`** 자리 (`복사` 바로 아래) | **`Shift + Insert`** (`&kp LS(INS)`) | 윈도우 표준 붙여넣기 단축키 (터미널/에디터 원키 붙여넣기) |
+| **복사 (Ctrl+Ins)** | **`T`** 자리 (`PG_UP` 바로 오른쪽) | **`Ctrl + Insert`** (`&kp LC(INS)`) | 윈도우 표준 복사 단축키 (터미널/에디터 원키 복사, SVG: `COPY / Ctrl+Ins`) |
+| **붙여넣기 (Shift+Ins)**| **`G`** 자리 (`복사` 바로 아래) | **`Shift + Insert`** (`&kp LS(INS)`) | 윈도우 표준 붙여넣기 단축키 (터미널/에디터 원키 붙여넣기, SVG: `PASTE / Shift+Ins`) |
 | **인서트** | **`RCTRL`** 자리 | **`INS`** (Insert) | 문서 삽입 모드 |
 | **딜리트** | **`INSERT`** 자리 | **`DEL`** (Delete) | 우측 하단 끝 Del 키 (기본 레이어 엄지에도 Delete 지원) |
 
@@ -135,6 +136,7 @@
   - `Y` 자리: **휠/중간 클릭** (`&mkp MCLK`)
   - `H` 자리: **우클릭** (`&mkp RCLK`)
   - `J` 자리: **구역 캡처 (원키)** (`Win+Shift+S` / Mac: `Cmd+Shift+4`) — **R-CLK 바로 옆 배치!**
+  - `M` 자리: **전체 화면 캡처** (`PSCRN`) — **구역 캡처(J) 바로 아래 배치!**
   - `N` 자리: **좌클릭** (`&mkp LCLK`)
 - **방향키, 네비게이션 & 빠른 클립보드 (왼손 완성형 클러스터)**:
   - Row 1: `HOME (Q)` | `UP (W)` | `END (E)` | **`PG_UP (R)`** | **`Ctrl+Ins (T)`**
