@@ -61,10 +61,10 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="631.5" y="125.5">-</text>
 <rect class="key" x="662.0" y="98.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="689.5" y="125.5">=</text>
-<rect class="key" x="720.0" y="98.0" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="747.5" y="125.5">[</text>
-<rect class="key" x="778.0" y="98.0" width="55.0" height="55.0" rx="5"/>
-<text class="label" x="805.5" y="125.5">]</text>
+<rect class="trans" x="720.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="747.5" y="125.5">▽</text>
+<rect class="trans" x="778.0" y="98.0" width="55.0" height="55.0" rx="5"/>
+<text class="label-trans" x="805.5" y="125.5">▽</text>
 <rect class="trans" x="24.0" y="156.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-trans" x="51.5" y="183.5">▽</text>
 <rect class="key" x="82.0" y="156.0" width="55.0" height="55.0" rx="5"/>
@@ -83,10 +83,10 @@ text{font-family:Arial,sans-serif;fill:#111}
 <rect class="key" x="546.0" y="156.0" width="55.0" height="55.0" rx="5"/>
 <text class="label-multi-1" x="573.5" y="176.0">SNIP</text>
 <text class="label-multi-2" x="573.5" y="192.0">Cmd+Shift+4</text>
-<rect class="trans" x="604.0" y="156.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="631.5" y="183.5">▽</text>
-<rect class="trans" x="662.0" y="156.0" width="55.0" height="55.0" rx="5"/>
-<text class="label-trans" x="689.5" y="183.5">▽</text>
+<rect class="key" x="604.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="631.5" y="183.5">[</text>
+<rect class="key" x="662.0" y="156.0" width="55.0" height="55.0" rx="5"/>
+<text class="label" x="689.5" y="183.5">]</text>
 <rect class="key" x="720.0" y="156.0" width="55.0" height="55.0" rx="5"/>
 <text class="label" x="747.5" y="183.5">'</text>
 <rect class="key" x="778.0" y="156.0" width="55.0" height="55.0" rx="5"/>
