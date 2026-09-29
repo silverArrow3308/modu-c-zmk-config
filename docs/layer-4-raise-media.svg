@@ -15,84 +15,81 @@ text{font-family:Arial,sans-serif;fill:#111}
 .label-multi-2{font-size:7.5px;text-anchor:middle;dominant-baseline:middle;fill:#444}
 .label-trans{font-size:10px;text-anchor:middle;dominant-baseline:middle;fill:#aaa}
 </style>
-<text x="24" y="18" class="title">MODU-C Layer 1: Windows Lower (F1~F12, Symbols, Mouse, Nav)</text>
+<text x="24" y="18" class="title">MODU-C Layer 4: Media Controls (Raise)</text>
 <rect class="key" x="24" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="51.5" y="67.5">F1</text>
+<text class="label" x="51.5" y="67.5">BRI -</text>
 <rect class="key" x="82" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="109.5" y="67.5">F2</text>
+<text class="label" x="109.5" y="67.5">BRI +</text>
 <rect class="key" x="140" y="40" width="55" height="55" rx="5"/>
 <text class="label" x="167.5" y="67.5">F3</text>
 <rect class="key" x="198" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="225.5" y="67.5">F4</text>
+<text class="label-sm" x="225.5" y="67.5">SEARCH</text>
 <rect class="key" x="256" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="283.5" y="67.5">F5</text>
+<text class="label" x="283.5" y="67.5">VOICE</text>
 <rect class="key" x="314" y="40" width="55" height="55" rx="5"/>
 <text class="label" x="341.5" y="67.5">F6</text>
 <rect class="key" x="488" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="515.5" y="67.5">F7</text>
+<text class="label" x="515.5" y="67.5">PREV</text>
 <rect class="key" x="546" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="573.5" y="67.5">F8</text>
+<text class="label" x="573.5" y="67.5">PLAY</text>
 <rect class="key" x="604" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="631.5" y="67.5">F9</text>
+<text class="label" x="631.5" y="67.5">NEXT</text>
 <rect class="key" x="662" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="689.5" y="67.5">F10</text>
+<text class="label" x="689.5" y="67.5">MUTE</text>
 <rect class="key" x="720" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="747.5" y="67.5">F11</text>
+<text class="label" x="747.5" y="67.5">VOL -</text>
 <rect class="key" x="778" y="40" width="55" height="55" rx="5"/>
-<text class="label" x="805.5" y="67.5">F12</text>
-<rect class="key" x="24" y="98" width="55" height="55" rx="5"/>
-<text class="label" x="51.5" y="125.5">~</text>
-<rect class="key" x="82" y="98" width="55" height="55" rx="5"/>
-<text class="label" x="109.5" y="125.5">HOME</text>
-<rect class="key" x="140" y="98" width="55" height="55" rx="5"/>
-<text class="label" x="167.5" y="125.5">UP</text>
-<rect class="key" x="198" y="98" width="55" height="55" rx="5"/>
-<text class="label" x="225.5" y="125.5">END</text>
-<rect class="key" x="256" y="98" width="55" height="55" rx="5"/>
-<text class="label" x="283.5" y="125.5">PG-UP</text>
-<rect class="key" x="314" y="98" width="55" height="55" rx="5"/>
-<text class="label-multi-1" x="341.5" y="118">COPY</text>
-<text class="label-multi-2" x="341.5" y="134">Ctrl+Ins</text>
-<rect class="key" x="488" y="98" width="55" height="55" rx="5"/>
-<text class="label" x="515.5" y="125.5">M-CLK</text>
-<rect class="key" x="546" y="98" width="55" height="55" rx="5"/>
-<text class="label" x="573.5" y="125.5">~</text>
-<rect class="key" x="604" y="98" width="55" height="55" rx="5"/>
-<text class="label" x="631.5" y="125.5">-</text>
-<rect class="key" x="662" y="98" width="55" height="55" rx="5"/>
-<text class="label" x="689.5" y="125.5">=</text>
+<text class="label" x="805.5" y="67.5">VOL +</text>
+<rect class="trans" x="24" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="51.5" y="125.5">&#9661;</text>
+<rect class="trans" x="82" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="109.5" y="125.5">&#9661;</text>
+<rect class="trans" x="140" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="167.5" y="125.5">&#9661;</text>
+<rect class="trans" x="198" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="225.5" y="125.5">&#9661;</text>
+<rect class="trans" x="256" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="283.5" y="125.5">&#9661;</text>
+<rect class="trans" x="314" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="341.5" y="125.5">&#9661;</text>
+<rect class="trans" x="488" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="515.5" y="125.5">&#9661;</text>
+<rect class="trans" x="546" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="573.5" y="125.5">&#9661;</text>
+<rect class="trans" x="604" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="631.5" y="125.5">&#9661;</text>
+<rect class="trans" x="662" y="98" width="55" height="55" rx="5"/>
+<text class="label-trans" x="689.5" y="125.5">&#9661;</text>
 <rect class="trans" x="720" y="98" width="55" height="55" rx="5"/>
 <text class="label-trans" x="747.5" y="125.5">&#9661;</text>
 <rect class="trans" x="778" y="98" width="55" height="55" rx="5"/>
 <text class="label-trans" x="805.5" y="125.5">&#9661;</text>
 <rect class="trans" x="24" y="156" width="55" height="55" rx="5"/>
 <text class="label-trans" x="51.5" y="183.5">&#9661;</text>
-<rect class="key" x="82" y="156" width="55" height="55" rx="5"/>
-<text class="label" x="109.5" y="183.5">LEFT</text>
-<rect class="key" x="140" y="156" width="55" height="55" rx="5"/>
-<text class="label" x="167.5" y="183.5">DOWN</text>
-<rect class="key" x="198" y="156" width="55" height="55" rx="5"/>
-<text class="label" x="225.5" y="183.5">RIGHT</text>
-<rect class="key" x="256" y="156" width="55" height="55" rx="5"/>
-<text class="label" x="283.5" y="183.5">PG-DN</text>
-<rect class="key" x="314" y="156" width="55" height="55" rx="5"/>
-<text class="label-multi-1" x="341.5" y="176">PASTE</text>
-<text class="label-multi-2" x="341.5" y="192">Shift+Ins</text>
-<rect class="key" x="488" y="156" width="55" height="55" rx="5"/>
-<text class="label" x="515.5" y="183.5">R-CLK</text>
-<rect class="key" x="546" y="156" width="55" height="55" rx="5"/>
-<text class="label-multi-1" x="573.5" y="176">SNIP</text>
-<text class="label-multi-2" x="573.5" y="192">Win+Shift+S</text>
-<rect class="key" x="604" y="156" width="55" height="55" rx="5"/>
-<text class="label" x="631.5" y="183.5">[</text>
-<rect class="key" x="662" y="156" width="55" height="55" rx="5"/>
-<text class="label" x="689.5" y="183.5">]</text>
-<rect class="key" x="720" y="156" width="55" height="55" rx="5"/>
-<text class="label" x="747.5" y="183.5">&apos;</text>
-<rect class="key" x="778" y="156" width="55" height="55" rx="5"/>
-<text class="label" x="805.5" y="183.5">RET</text>
-<rect class="key" x="24" y="214" width="55" height="55" rx="5"/>
-<text class="label" x="51.5" y="241.5">LSFT</text>
+<rect class="trans" x="82" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="109.5" y="183.5">&#9661;</text>
+<rect class="trans" x="140" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="167.5" y="183.5">&#9661;</text>
+<rect class="trans" x="198" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="225.5" y="183.5">&#9661;</text>
+<rect class="trans" x="256" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="283.5" y="183.5">&#9661;</text>
+<rect class="trans" x="314" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="341.5" y="183.5">&#9661;</text>
+<rect class="trans" x="488" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="515.5" y="183.5">&#9661;</text>
+<rect class="trans" x="546" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="573.5" y="183.5">&#9661;</text>
+<rect class="trans" x="604" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="631.5" y="183.5">&#9661;</text>
+<rect class="trans" x="662" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="689.5" y="183.5">&#9661;</text>
+<rect class="trans" x="720" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="747.5" y="183.5">&#9661;</text>
+<rect class="trans" x="778" y="156" width="55" height="55" rx="5"/>
+<text class="label-trans" x="805.5" y="183.5">&#9661;</text>
+<rect class="trans" x="24" y="214" width="55" height="55" rx="5"/>
+<text class="label-trans" x="51.5" y="241.5">&#9661;</text>
 <rect class="trans" x="82" y="214" width="55" height="55" rx="5"/>
 <text class="label-trans" x="109.5" y="241.5">&#9661;</text>
 <rect class="trans" x="140" y="214" width="55" height="55" rx="5"/>
@@ -103,18 +100,18 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label-trans" x="283.5" y="241.5">&#9661;</text>
 <rect class="trans" x="314" y="214" width="55" height="55" rx="5"/>
 <text class="label-trans" x="341.5" y="241.5">&#9661;</text>
-<rect class="key" x="488" y="214" width="55" height="55" rx="5"/>
-<text class="label" x="515.5" y="241.5">L-CLK</text>
-<rect class="key" x="546" y="214" width="55" height="55" rx="5"/>
-<text class="label" x="573.5" y="241.5">PSCRN</text>
+<rect class="trans" x="488" y="214" width="55" height="55" rx="5"/>
+<text class="label-trans" x="515.5" y="241.5">&#9661;</text>
+<rect class="trans" x="546" y="214" width="55" height="55" rx="5"/>
+<text class="label-trans" x="573.5" y="241.5">&#9661;</text>
 <rect class="trans" x="604" y="214" width="55" height="55" rx="5"/>
 <text class="label-trans" x="631.5" y="241.5">&#9661;</text>
 <rect class="trans" x="662" y="214" width="55" height="55" rx="5"/>
 <text class="label-trans" x="689.5" y="241.5">&#9661;</text>
-<rect class="key" x="720" y="214" width="55" height="55" rx="5"/>
-<text class="label" x="747.5" y="241.5">\</text>
-<rect class="key" x="778" y="214" width="55" height="55" rx="5"/>
-<text class="label" x="805.5" y="241.5">RSFT</text>
+<rect class="trans" x="720" y="214" width="55" height="55" rx="5"/>
+<text class="label-trans" x="747.5" y="241.5">&#9661;</text>
+<rect class="trans" x="778" y="214" width="55" height="55" rx="5"/>
+<text class="label-trans" x="805.5" y="241.5">&#9661;</text>
 <rect class="trans" x="24" y="272" width="55" height="55" rx="5"/>
 <text class="label-trans" x="51.5" y="299.5">&#9661;</text>
 <rect class="trans" x="82" y="272" width="55" height="55" rx="5"/>
@@ -129,10 +126,10 @@ text{font-family:Arial,sans-serif;fill:#111}
 <rect class="none" x="459" y="294" width="9.8" height="9.8" rx="5"/>
 <rect class="trans" x="662" y="272" width="55" height="55" rx="5"/>
 <text class="label-trans" x="689.5" y="299.5">&#9661;</text>
-<rect class="key" x="720" y="272" width="55" height="55" rx="5"/>
-<text class="label" x="747.5" y="299.5">INS</text>
-<rect class="key" x="778" y="272" width="55" height="55" rx="5"/>
-<text class="label" x="805.5" y="299.5">DEL</text>
+<rect class="trans" x="720" y="272" width="55" height="55" rx="5"/>
+<text class="label-trans" x="747.5" y="299.5">&#9661;</text>
+<rect class="trans" x="778" y="272" width="55" height="55" rx="5"/>
+<text class="label-trans" x="805.5" y="299.5">&#9661;</text>
 <rect class="trans" x="198" y="344.5" width="55" height="55" rx="5"/>
 <text class="label-trans" x="225.5" y="372">&#9661;</text>
 <rect class="trans" x="256" y="344.5" width="55" height="55" rx="5"/>
@@ -141,11 +138,11 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label-trans" x="341.5" y="372">&#9661;</text>
 <rect class="trans" x="488" y="344.5" width="55" height="55" rx="5"/>
 <text class="label-trans" x="515.5" y="372">&#9661;</text>
-<rect class="key" x="546" y="344.5" width="55" height="55" rx="5"/>
-<text class="label" x="573.5" y="372">RET</text>
-<rect class="key" x="604" y="344.5" width="55" height="55" rx="5"/>
-<text class="label" x="631.5" y="372">BSPC</text>
+<rect class="trans" x="546" y="344.5" width="55" height="55" rx="5"/>
+<text class="label-trans" x="573.5" y="372">&#9661;</text>
+<rect class="trans" x="604" y="344.5" width="55" height="55" rx="5"/>
+<text class="label-trans" x="631.5" y="372">&#9661;</text>
 <rect class="trans" x="662" y="344.5" width="55" height="55" rx="5"/>
 <text class="label-trans" x="689.5" y="372">&#9661;</text>
-<text x="24" y="411" class="note">왼쪽 엄지 MO 1 홀드 시 활성화 · F1~F12, 방향키, 넘패드/기호, 마우스, Win 클립보드</text>
+<text x="24" y="411" class="note">오른쪽 엄지 MO 4 홀드 시 활성화 (Win/Mac 공용) · 밝기, Spotlight, 음성입력, 미디어/볼륨</text>
 </svg>

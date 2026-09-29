@@ -59,27 +59,24 @@
     - ⚠️ **중요 (플레이스홀더)**: Row 4의 중앙 6개 키(인덱스 51~56, Row 4 Col 3~8)는 물리적으로 스위치가 없으나 ZMK 매트릭스 정렬을 위해 반드시 `&none` 플레이스홀더를 유지해야 합니다.
   - **Row 5 (엄지 클러스터)**: 좌측 3키(Col 0, 1, 2) + 우측 4키(Col 6, 7, 8, 9) = 총 7키
 
-### ② 9개 레이어 구조 분석
+### ② 6개 레이어 구조 분석
 | 레이어 | 이름 | 진입 방식 | 주요 역할 및 특징 |
 | :---: | :--- | :--- | :--- |
-| **Layer 0** | `default_layer` | 기본값 / Lower `Alt(49)` / 미디어 `B(41)` | **Windows 기본 모드** (우상단 Delete, RALT 자리 한/영, 양손 엄지 MO 1, 우측 엄지 Backspace) |
-| **Layer 1** | `lower_layer` | 엄지 `MO 1` 홀드 | **Windows 보조 레이어** (F1~F12, Alt:Win, Cmd:Mac, B:Media, 기호/편집키, 마우스, BT) |
-| **Layer 2** | `layer_2` | Lower에서 `MO 2` 홀드 | **부트로더 레이어** (5, 6번 누르면 UF2 펌웨어 플래싱 모드 진입) |
-| **Layer 3** | `mac_layer` | Lower `Cmd(50)` / 미디어 `B(41)` | **Mac 기본 모드** (왼쪽 ⌥ Opt, ⌘ Cmd 및 대칭 엄지 배치) |
-| **Layer 4** | `mac_lower_layer` | 엄지 `MO 4` 홀드 | **Mac 보조 레이어** (F1~F12, Alt:Win, Cmd:Mac, B:Media, 기호/편집키, 마우스, BT) |
-| **Layer 5** | `mac_media_layer` | Mac Lower에서 `B(41)` | **Mac 미디어 기본 모드** (엄지 MO 6 매핑) |
-| **Layer 6** | `mac_media_lower_layer` | 엄지 `MO 6` 홀드 | **Mac 미디어 Lower** (최신 macOS 밝기, Spotlight, 마이크, 음량, B:F키 복귀) |
-| **Layer 7** | `win_media_layer` | Windows Lower에서 `B(41)` | **Windows 미디어 기본 모드** (엄지 MO 8 매핑) |
-| **Layer 8** | `win_media_lower_layer` | 엄지 `MO 8` 홀드 | **Windows 미디어 Lower** (멀티미디어 제어 키 매핑, B:F키 복귀) |
+| **Layer 0** | `default_layer` | 기본값 / Adjust에서 `Alt(49)` | **Windows 기본 모드** (왼쪽 엄지 `MO 1`, 오른쪽 엄지 `MO 4`, 우측 엄지 Backspace) |
+| **Layer 1** | `lower_layer` | 왼쪽 엄지 `MO 1` 홀드 | **Windows 보조 레이어** (F1~F12, 방향키, Win 클립보드, 기호/편집키, 마우스) |
+| **Layer 2** | `mac_layer` | Adjust에서 `Cmd(50)` | **Mac 기본 모드** (왼쪽 ⌥ Opt, ⌘ Cmd, 왼쪽 엄지 `MO 3`, 오른쪽 엄지 `MO 4`) |
+| **Layer 3** | `mac_lower_layer` | 왼쪽 엄지 `MO 3` 홀드 | **Mac 보조 레이어** (F1~F12, 방향키, Mac 클립보드, 기호/편집키, 마우스) |
+| **Layer 4** | `raise_media` | 오른쪽 엄지 `MO 4` 홀드 | **미디어 컨트롤 전용** (Win/Mac 공용: 밝기, 검색, 음성인식, 미디어/볼륨) |
+| **Layer 5** | `adjust_system` | 양손 엄지 MO 동시 홀드 | **시스템/부트로더 설정** (BT 1~3, BT 초기화, 부트로더, Studio, Win/Mac 모드 전환) |
 
 ### ③ 엄지 클러스터 배치
-- **Windows (`default_layer` / `win_media_layer`)**:
-  - 좌측 엄지: `[Backspace (&kp BACKSPACE)]` | `[Space]` | `[Lower (&mo 1 / &mo 8)]`
-  - 우측 엄지: `[Lower (&mo 1 / &mo 8)]` | `[Space]` | `[Backspace (&kp BACKSPACE)]` | `[B]`
+- **Windows (`default_layer`)**:
+  - 좌측 엄지: `[Backspace (&kp BACKSPACE)]` | `[Space]` | `[Lower (&mo 1)]`
+  - 우측 엄지: `[Raise (&mo 4)]` | `[Space]` | `[Backspace (&kp BACKSPACE)]` | `[B]`
   - *(참고: 우측 상단 끝은 `[Delete (&kp DELETE)]`, Row 4의 RALT 자리는 `[한/영 (&kp LANG1)]`)*
-- **Mac (`mac_layer` / `mac_media_layer`)**:
-  - 좌측 엄지: `[한/영 (&kp LANG1)]` | `[Space]` | `[Lower (&mo 4 / &mo 6)]`
-  - 우측 엄지: `[Lower (&mo 4 / &mo 6)]` | `[Space]` | `[Backspace (&kp BACKSPACE)]` | `[B]`
+- **Mac (`mac_layer`)**:
+  - 좌측 엄지: `[한/영 (&kp LANG1)]` | `[Space]` | `[Lower (&mo 3)]`
+  - 우측 엄지: `[Raise (&mo 4)]` | `[Space]` | `[Backspace (&kp BACKSPACE)]` | `[B]`
   - *(참고: 우측 상단 끝은 `[Delete (&kp DELETE)]`)*
 
 ### ④ Lower 레이어 표준 기호 및 마우스 포인팅 매핑
@@ -97,7 +94,7 @@
   - `H`: 우클릭 (`&mkp RCLK`)
   - `N`: 좌클릭 (`&mkp LCLK`)
 
-### ⑤ 최신 macOS 멀티미디어 키 매핑 (`mac_media_lower_layer`)
+### ⑤ 최신 macOS 멀티미디어 키 매핑 (`raise_media`)
 - `F1` / `F2`: 화면 밝기 감소 (`&kp C_BRI_DN`) / 증가 (`&kp C_BRI_UP`)
 - `F3`: Mission Control (`&kp F3`)
 - `F4`: Spotlight 통합 검색창 (`&kp C_AC_SEARCH`)
@@ -107,16 +104,15 @@
 - `F10` ~ `F12`: 음소거 (`&kp C_MUTE`), 볼륨 감소 (`&kp C_VOL_DN`), 볼륨 증가 (`&kp C_VOL_UP`)
 
 ### ⑥ 모드 전환 및 시스템 조작 시스템
-엄지 `MO` 키를 누른 상태(Lower 레이어)에서 단일 전용 키 입력:
+양손 엄지 MO 키(왼쪽 엄지 + 오른쪽 엄지)를 동시에 누르면 **`Layer 5 (adjust_system)`**가 활성화됩니다:
 - **`LALT(49번)`**: Windows 기본 모드(`default_layer`) 전환 (`&to 0`)
-- **`LGUI / Cmd(50번)`**: Mac 기본 모드(`mac_layer`) 전환 (`&to 3`)
-- **`B(41번)`**: **현재 OS 내에서 F키 모드 ↔ 멀티미디어 모드 상호 토글**
-  - Windows F키(Layer 1) ➔ Windows 미디어(Layer 7)
-  - Windows 미디어(Layer 8) ➔ Windows F키(Layer 0)
-  - Mac F키(Layer 4) ➔ Mac 미디어(Layer 5)
-  - Mac 미디어(Layer 6) ➔ Mac F키(Layer 3)
-- **`LCTRL(48)` + `5` + `6` (콤보)**: 키보드 소프트 리셋 (`&sys_reset`)
-- **좌측 하단 `MO 2` + `5` or `6`**: USB 부트로더 진입 (`&bootloader`)
+- **`LGUI / Cmd(50번)`**: Mac 기본 모드(`mac_layer`) 전환 (`&to 2`)
+- **`1 ~ 3번 키`**: 블루투스 프로파일 선택 (`&bt BT_SEL 0~2`)
+- **`4번 키`**: 블루투스 페어링 초기화 (`&bt BT_CLR`)
+- **`5 또는 6번 키`**: USB 부트로더 진입 (`&bootloader`)
+- **`R 키`**: ZMK Studio 잠금 해제 (`&studio_unlock`)
+- **`T 키`**: USB 유선 출력 지정 (`&out OUT_USB`)
+- **`LCTRL(48)` + `5` + `6` (콤보)**: 시스템 소프트 리셋 (`&sys_reset`, Lower 및 Adjust에서만 작동)
 
 ---
 

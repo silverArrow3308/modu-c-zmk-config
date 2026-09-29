@@ -18,56 +18,38 @@ ROOT = Path(__file__).resolve().parents[1]
 LAYER_METADATA = {
     "default_layer": {
         "file_name": "layer-0-default.svg",
-        "title": "MODU-C Layer 0: Windows Default (F-Key Mode)",
-        "note": "Windows 기본 레이어 · 엄지 MO 1로 Lower 진입 · Lower에서 Alt(Win), Cmd(Mac), B(Media)",
+        "title": "MODU-C Layer 0: Windows Default",
+        "note": "Windows 기본 레이어 · 왼쪽 엄지 MO 1(Lower), 오른쪽 엄지 MO 4(Raise), 양손 엄지(Adjust)",
         "is_mac": False,
     },
     "lower_layer": {
         "file_name": "layer-1-lower.svg",
         "title": "MODU-C Layer 1: Windows Lower (F1~F12, Symbols, Mouse, Nav)",
-        "note": "엄지 MO 1 홀드 시 활성화 · F1~F12, Alt(Win), Cmd(Mac), B(Media), 방향키, 넘패드/기호, 마우스, BT",
-        "is_mac": False,
-    },
-    "layer_2": {
-        "file_name": "layer-2-bootloader.svg",
-        "title": "MODU-C Layer 2: Bootloader & Studio (Firmware & Config)",
-        "note": "Lower 상태에서 좌측 하단 MO 2 + 5/6(Bootloader), R(Studio Unlock), T(USB Out)",
+        "note": "왼쪽 엄지 MO 1 홀드 시 활성화 · F1~F12, 방향키, 넘패드/기호, 마우스, Win 클립보드",
         "is_mac": False,
     },
     "mac_layer": {
-        "file_name": "layer-3-mac.svg",
-        "title": "MODU-C Layer 3: Mac Default (F-Key Mode)",
-        "note": "Mac 기본 레이어 (Command ⌘, Option ⌥) · 엄지 MO 4로 Lower 진입 · Lower에서 Alt(Win), Cmd(Mac), B(Media)",
+        "file_name": "layer-2-mac.svg",
+        "title": "MODU-C Layer 2: Mac Default",
+        "note": "Mac 기본 레이어 (Command ⌘, Option ⌥) · 왼쪽 엄지 MO 3(Lower), 오른쪽 엄지 MO 4(Raise)",
         "is_mac": True,
     },
     "mac_lower_layer": {
-        "file_name": "layer-4-mac-lower.svg",
-        "title": "MODU-C Layer 4: Mac Lower (F1~F12, Symbols, Mouse, Nav)",
-        "note": "엄지 MO 4 홀드 시 활성화 · F1~F12, Alt(Win), Cmd(Mac), B(Media), 방향키, 기호, 마우스, BT",
+        "file_name": "layer-3-mac-lower.svg",
+        "title": "MODU-C Layer 3: Mac Lower (F1~F12, Symbols, Mouse, Nav)",
+        "note": "왼쪽 엄지 MO 3 홀드 시 활성화 · F1~F12, 방향키, 기호, 마우스, Mac 클립보드(Cmd+C/V)",
         "is_mac": True,
     },
-    "mac_media_layer": {
-        "file_name": "layer-5-mac-media.svg",
-        "title": "MODU-C Layer 5: Mac Media Default",
-        "note": "Mac 미디어 기본 레이어 · 엄지 MO 6으로 미디어 보조 레이어 진입 · Lower에서 B로 F키 복귀",
-        "is_mac": True,
-    },
-    "mac_media_lower_layer": {
-        "file_name": "layer-6-mac-media-lower.svg",
-        "title": "MODU-C Layer 6: Mac Media Lower (Brightness, Spotlight, Voice, Media, Vol)",
-        "note": "엄지 MO 6 홀드 시 활성화 · 최신 macOS 밝기/검색/음성/미디어, Alt(Win), Cmd(Mac), B(F-Key)",
-        "is_mac": True,
-    },
-    "win_media_layer": {
-        "file_name": "layer-7-win-media.svg",
-        "title": "MODU-C Layer 7: Windows Media Default",
-        "note": "Windows 미디어 기본 레이어 · 엄지 MO 8로 미디어 보조 레이어 진입 · Lower에서 B로 F키 복귀",
+    "raise_media": {
+        "file_name": "layer-4-raise-media.svg",
+        "title": "MODU-C Layer 4: Media Controls (Raise)",
+        "note": "오른쪽 엄지 MO 4 홀드 시 활성화 (Win/Mac 공용) · 밝기, Spotlight, 음성입력, 미디어/볼륨",
         "is_mac": False,
     },
-    "win_media_lower_layer": {
-        "file_name": "layer-8-win-media-lower.svg",
-        "title": "MODU-C Layer 8: Windows Media Lower (Media & System Controls)",
-        "note": "엄지 MO 8 홀드 시 활성화 · 밝기, 검색, 음성인식, 미디어, Alt(Win), Cmd(Mac), B(F-Key)",
+    "adjust_system": {
+        "file_name": "layer-5-adjust-system.svg",
+        "title": "MODU-C Layer 5: System Adjust (Bootloader, BT, OS Toggle)",
+        "note": "양손 엄지 동시 홀드 시 활성화 · BT 1~3, BT CLR, 부트로더, Studio Unlock, USB 출력, Win/Mac 모드 전환",
         "is_mac": False,
     },
 }
@@ -153,15 +135,9 @@ LABEL_MAP: dict[str, str] = {
 def clean_label(binding: str, is_mac: bool = False, layer_name: str = "", index: int = -1) -> str:
     """Format a ZMK binding into a clean, short SVG label."""
     if binding == "&to 0":
-        if layer_name == "win_media_lower_layer" and index == 41:
-            return "F-KEY"
         return "TO WIN"
-    if binding == "&to 3":
-        if layer_name == "mac_media_lower_layer" and index == 41:
-            return "F-KEY"
+    if binding in ("&to 2", "&to 3"):
         return "TO MAC"
-    if binding in ("&to 5", "&to 7"):
-        return "MEDIA"
 
     if binding in LABEL_MAP:
         label = LABEL_MAP[binding]

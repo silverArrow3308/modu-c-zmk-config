@@ -15,7 +15,7 @@ text{font-family:Arial,sans-serif;fill:#111}
 .label-multi-2{font-size:7.5px;text-anchor:middle;dominant-baseline:middle;fill:#444}
 .label-trans{font-size:10px;text-anchor:middle;dominant-baseline:middle;fill:#aaa}
 </style>
-<text x="24" y="18" class="title">MODU-C Layer 0: Windows Default</text>
+<text x="24" y="18" class="title">MODU-C Layer 2: Mac Default</text>
 <rect class="key" x="24" y="40" width="55" height="55" rx="5"/>
 <text class="label" x="51.5" y="67.5">ESC</text>
 <rect class="key" x="82" y="40" width="55" height="55" rx="5"/>
@@ -115,9 +115,9 @@ text{font-family:Arial,sans-serif;fill:#111}
 <rect class="key" x="24" y="272" width="55" height="55" rx="5"/>
 <text class="label" x="51.5" y="299.5">LCTL</text>
 <rect class="key" x="82" y="272" width="55" height="55" rx="5"/>
-<text class="label" x="109.5" y="299.5">LALT</text>
+<text class="label" x="109.5" y="299.5">OPT</text>
 <rect class="key" x="140" y="272" width="55" height="55" rx="5"/>
-<text class="label" x="167.5" y="299.5">LGUI</text>
+<text class="label" x="167.5" y="299.5">CMD</text>
 <rect class="none" x="348.8" y="294" width="9.8" height="9.8" rx="5"/>
 <rect class="none" x="370.8" y="294" width="9.8" height="9.8" rx="5"/>
 <rect class="none" x="392.9" y="294" width="9.8" height="9.8" rx="5"/>
@@ -125,17 +125,17 @@ text{font-family:Arial,sans-serif;fill:#111}
 <rect class="none" x="437" y="294" width="9.8" height="9.8" rx="5"/>
 <rect class="none" x="459" y="294" width="9.8" height="9.8" rx="5"/>
 <rect class="key" x="662" y="272" width="55" height="55" rx="5"/>
-<text class="label" x="689.5" y="299.5">한/영</text>
+<text class="label" x="689.5" y="299.5">CMD</text>
 <rect class="key" x="720" y="272" width="55" height="55" rx="5"/>
 <text class="label" x="747.5" y="299.5">RCTL</text>
 <rect class="key" x="778" y="272" width="55" height="55" rx="5"/>
 <text class="label" x="805.5" y="299.5">INS</text>
 <rect class="key" x="198" y="344.5" width="55" height="55" rx="5"/>
-<text class="label" x="225.5" y="372">BSPC</text>
+<text class="label" x="225.5" y="372">한/영</text>
 <rect class="key" x="256" y="344.5" width="55" height="55" rx="5"/>
 <text class="label" x="283.5" y="372">SPACE</text>
 <rect class="mo" x="314" y="344.5" width="55" height="55" rx="5"/>
-<text class="label" x="341.5" y="372">MO 1</text>
+<text class="label" x="341.5" y="372">MO 3</text>
 <rect class="mo" x="488" y="344.5" width="55" height="55" rx="5"/>
 <text class="label" x="515.5" y="372">MO 4</text>
 <rect class="key" x="546" y="344.5" width="55" height="55" rx="5"/>
@@ -144,5 +144,5 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="631.5" y="372">BSPC</text>
 <rect class="key" x="662" y="344.5" width="55" height="55" rx="5"/>
 <text class="label" x="689.5" y="372">B</text>
-<text x="24" y="411" class="note">Windows 기본 레이어 · 왼쪽 엄지 MO 1(Lower), 오른쪽 엄지 MO 4(Raise), 양손 엄지(Adjust)</text>
+<text x="24" y="411" class="note">Mac 기본 레이어 (Command ⌘, Option ⌥) · 왼쪽 엄지 MO 3(Lower), 오른쪽 엄지 MO 4(Raise)</text>
 </svg>

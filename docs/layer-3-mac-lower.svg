@@ -15,7 +15,7 @@ text{font-family:Arial,sans-serif;fill:#111}
 .label-multi-2{font-size:7.5px;text-anchor:middle;dominant-baseline:middle;fill:#444}
 .label-trans{font-size:10px;text-anchor:middle;dominant-baseline:middle;fill:#aaa}
 </style>
-<text x="24" y="18" class="title">MODU-C Layer 1: Windows Lower (F1~F12, Symbols, Mouse, Nav)</text>
+<text x="24" y="18" class="title">MODU-C Layer 3: Mac Lower (F1~F12, Symbols, Mouse, Nav)</text>
 <rect class="key" x="24" y="40" width="55" height="55" rx="5"/>
 <text class="label" x="51.5" y="67.5">F1</text>
 <rect class="key" x="82" y="40" width="55" height="55" rx="5"/>
@@ -52,7 +52,7 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="283.5" y="125.5">PG-UP</text>
 <rect class="key" x="314" y="98" width="55" height="55" rx="5"/>
 <text class="label-multi-1" x="341.5" y="118">COPY</text>
-<text class="label-multi-2" x="341.5" y="134">Ctrl+Ins</text>
+<text class="label-multi-2" x="341.5" y="134">Cmd+C</text>
 <rect class="key" x="488" y="98" width="55" height="55" rx="5"/>
 <text class="label" x="515.5" y="125.5">M-CLK</text>
 <rect class="key" x="546" y="98" width="55" height="55" rx="5"/>
@@ -77,12 +77,12 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="283.5" y="183.5">PG-DN</text>
 <rect class="key" x="314" y="156" width="55" height="55" rx="5"/>
 <text class="label-multi-1" x="341.5" y="176">PASTE</text>
-<text class="label-multi-2" x="341.5" y="192">Shift+Ins</text>
+<text class="label-multi-2" x="341.5" y="192">Cmd+V</text>
 <rect class="key" x="488" y="156" width="55" height="55" rx="5"/>
 <text class="label" x="515.5" y="183.5">R-CLK</text>
 <rect class="key" x="546" y="156" width="55" height="55" rx="5"/>
 <text class="label-multi-1" x="573.5" y="176">SNIP</text>
-<text class="label-multi-2" x="573.5" y="192">Win+Shift+S</text>
+<text class="label-multi-2" x="573.5" y="192">Cmd+Shift+4</text>
 <rect class="key" x="604" y="156" width="55" height="55" rx="5"/>
 <text class="label" x="631.5" y="183.5">[</text>
 <rect class="key" x="662" y="156" width="55" height="55" rx="5"/>
@@ -147,5 +147,5 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="631.5" y="372">BSPC</text>
 <rect class="trans" x="662" y="344.5" width="55" height="55" rx="5"/>
 <text class="label-trans" x="689.5" y="372">&#9661;</text>
-<text x="24" y="411" class="note">왼쪽 엄지 MO 1 홀드 시 활성화 · F1~F12, 방향키, 넘패드/기호, 마우스, Win 클립보드</text>
+<text x="24" y="411" class="note">왼쪽 엄지 MO 3 홀드 시 활성화 · F1~F12, 방향키, 기호, 마우스, Mac 클립보드(Cmd+C/V)</text>
 </svg>
