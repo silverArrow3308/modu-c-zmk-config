@@ -55,7 +55,7 @@
 - **매트릭스 크기**: 12열 × 6행 (총 67개 바인딩)
 - **행 구성**:
   - **Row 0 ~ 3**: 표준 12열 키들 (양손 각 6키씩 48키)
-  - **Row 4**: 좌측 3키(`LCTL`, `LALT`, `LGUI`), 우측 3키(`RALT`, `RCTRL`, `INS`)
+  - **Row 4**: 좌측 3키(Windows: `LCTL`, `LGUI`, `LALT` / Mac: `LCTL`, `LALT`, `LGUI`), 우측 3키(`RALT`/`RGUI`, `RCTRL`, `INS`)
     - ⚠️ **중요 (플레이스홀더)**: Row 4의 중앙 6개 키(인덱스 51~56, Row 4 Col 3~8)는 물리적으로 스위치가 없으나 ZMK 매트릭스 정렬을 위해 반드시 `&none` 플레이스홀더를 유지해야 합니다.
   - **Row 5 (엄지 클러스터)**: 좌측 3키(Col 0, 1, 2) + 우측 4키(Col 6, 7, 8, 9) = 총 7키
 
@@ -104,14 +104,14 @@
 - `F10` ~ `F12`: 음소거 (`&kp C_MUTE`), 볼륨 감소 (`&kp C_VOL_DN`), 볼륨 증가 (`&kp C_VOL_UP`)
 
 ### ⑥ 모드 전환 및 시스템 조작 시스템
-양손 엄지 MO 키(왼쪽 엄지 + 오른쪽 엄지)를 동시에 누르면 **`Layer 5 (adjust_system)`**가 활성화됩니다:
-- **`LALT(49번)`**: Windows 기본 모드(`default_layer`) 전환 (`&to 0`)
-- **`LGUI / Cmd(50번)`**: Mac 기본 모드(`mac_layer`) 전환 (`&to 2`)
-- **`1 ~ 3번 키`**: 블루투스 프로파일 선택 (`&bt BT_SEL 0~2`)
-- **`4번 키`**: 블루투스 페어링 초기화 (`&bt BT_CLR`)
-- **`5 또는 6번 키`**: USB 부트로더 진입 (`&bootloader`)
-- **`R 키`**: ZMK Studio 잠금 해제 (`&studio_unlock`)
-- **`T 키`**: USB 유선 출력 지정 (`&out OUT_USB`)
+왼쪽 엄지 MO(Lower) 또는 양손 엄지 MO(Adjust)를 누른 상태에서:
+- **`49번 키 (Row 4 Col 1)`**: Windows 기본 모드(`default_layer`) 전환 (`&to 0`)
+- **`50번 키 (Row 4 Col 2)`**: Mac 기본 모드(`mac_layer`) 전환 (`&to 2`)
+- **`1 ~ 3번 키` (Adjust)**: 블루투스 프로파일 선택 (`&bt BT_SEL 0~2`)
+- **`4번 키` (Adjust)**: 블루투스 페어링 초기화 (`&bt BT_CLR`)
+- **`5 또는 6번 키` (Adjust)**: USB 부트로더 진입 (`&bootloader`)
+- **`R 키` (Adjust)**: ZMK Studio 잠금 해제 (`&studio_unlock`)
+- **`T 키` (Adjust)**: USB 유선 출력 지정 (`&out OUT_USB`)
 - **`LCTRL(48)` + `5` + `6` (콤보)**: 시스템 소프트 리셋 (`&sys_reset`, Lower 및 Adjust에서만 작동)
 
 ---

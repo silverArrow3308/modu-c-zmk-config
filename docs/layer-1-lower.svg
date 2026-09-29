@@ -117,10 +117,10 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="805.5" y="241.5">RSFT</text>
 <rect class="trans" x="24" y="272" width="55" height="55" rx="5"/>
 <text class="label-trans" x="51.5" y="299.5">&#9661;</text>
-<rect class="trans" x="82" y="272" width="55" height="55" rx="5"/>
-<text class="label-trans" x="109.5" y="299.5">&#9661;</text>
-<rect class="trans" x="140" y="272" width="55" height="55" rx="5"/>
-<text class="label-trans" x="167.5" y="299.5">&#9661;</text>
+<rect class="mo" x="82" y="272" width="55" height="55" rx="5"/>
+<text class="label-sm" x="109.5" y="299.5">TO WIN</text>
+<rect class="mo" x="140" y="272" width="55" height="55" rx="5"/>
+<text class="label-sm" x="167.5" y="299.5">TO MAC</text>
 <rect class="none" x="348.8" y="294" width="9.8" height="9.8" rx="5"/>
 <rect class="none" x="370.8" y="294" width="9.8" height="9.8" rx="5"/>
 <rect class="none" x="392.9" y="294" width="9.8" height="9.8" rx="5"/>
@@ -147,5 +147,5 @@ text{font-family:Arial,sans-serif;fill:#111}
 <text class="label" x="631.5" y="372">BSPC</text>
 <rect class="trans" x="662" y="344.5" width="55" height="55" rx="5"/>
 <text class="label-trans" x="689.5" y="372">&#9661;</text>
-<text x="24" y="411" class="note">왼쪽 엄지 MO 1 홀드 시 활성화 · F1~F12, 방향키, 넘패드/기호, 마우스, Win 클립보드</text>
+<text x="24" y="411" class="note">왼쪽 엄지 MO 1 홀드 시 활성화 · 49(Win)/50(Mac) 전환, F1~F12, 방향키, Win 클립보드</text>
 </svg>

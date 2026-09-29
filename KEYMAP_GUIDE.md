@@ -43,18 +43,22 @@
 
 ## 2. 모드 전환 및 시스템 조작 방법
 
-**양손 엄지 MO 키(왼쪽 엄지 + 오른쪽 엄지)를 동시에 누르면 `Layer 5 (adjust_system)`가 즉시 활성화**됩니다.
+**왼쪽 엄지 MO(Lower) 또는 양손 엄지 MO(Adjust)를 누른 상태에서** 직관적인 전용 키로 OS 모드를 즉시 전환합니다.
 
 | 기능 | 조작 방법 | 동작 설명 |
 | :--- | :--- | :--- |
-| **Windows 모드 전환** | 양손 엄지 누른 채 **`LALT(49번)`** 입력 | Layer 0(`default_layer`) Windows 기본 모드로 전환 (`&to 0`) |
-| **Mac 모드 전환** | 양손 엄지 누른 채 **`LGUI / Cmd(50번)`** 입력 | Layer 2(`mac_layer`) Mac 기본 모드로 전환 (`&to 2`) |
+| **Windows 모드 전환** | 엄지 `MO` 누른 채 **`49번 (Row 4 Col 1)`** 입력 | Layer 0(`default_layer`) Windows 기본 모드로 전환 (`&to 0`) |
+| **Mac 모드 전환** | 엄지 `MO` 누른 채 **`50번 (Row 4 Col 2)`** 입력 | Layer 2(`mac_layer`) Mac 기본 모드로 전환 (`&to 2`) |
 | **블루투스 기기 1~3번 선택** | 양손 엄지 누른 채 숫자 **`1`, `2`, `3`** 키 입력 | Bluetooth 프로파일 0~2번 선택 (`&bt BT_SEL 0~2`) |
 | **블루투스 페어링 초기화** | 양손 엄지 누른 채 숫자 **`4`** 키 입력 | 현재 블루투스 연결 해제 및 초기화 (`&bt BT_CLR`) |
 | **부트로더(UF2 플래싱) 진입** | 양손 엄지 누른 채 숫자 **`5` 또는 `6`** 키 입력 | 새 펌웨어 복사를 위한 USB 드라이브 모드 진입 (`&bootloader`) |
 | **ZMK Studio 잠금 해제** | 양손 엄지 누른 채 **`R`** 키 입력 | 웹/앱 기반 실시간 키맵 에디터 잠금 해제 (`&studio_unlock`) |
 | **USB 유선 출력 고정** | 양손 엄지 누른 채 **`T`** 키 입력 | 출력 경로를 USB 케이블로 지정 (`&out OUT_USB`) |
 | **시스템 소프트 리셋** | Lower/Adjust 상태에서 **`LCTRL(48)` + `5` + `6`** 동시 입력 | 키보드 소프트웨어 재부팅 (`&sys_reset`) |
+
+> 💡 **원키 OS 전환 (1-Thumb & 2-Thumb 지원)**:
+> - 왼쪽 엄지(`Lower`)만 누른 상태에서도 `49번`으로 Windows, `50번`으로 Mac 전환이 가능합니다!
+> - 양손 엄지(`Adjust`)를 누른 상태에서도 동일하게 작동합니다.
 
 ---
 
@@ -79,19 +83,23 @@
 
 ---
 
-## 4. Mac 모드 (`mac_layer`) 하단 및 엄지 배열
+## 4. Windows vs Mac 모디파이어 및 엄지 배열 비교
 
-맥 OS 표준 환경에 맞춰 모디파이어 키 및 엄지 배치가 완벽하게 정렬되어 있습니다.
+Windows 표준 PC 환경과 macOS 표준 환경에 맞춰 좌측 모디파이어 및 엄지 배치가 각각 최적화되어 있습니다:
 
 ```
-[Row 4 좌측]  Control (^, &kp LCTRL)  |  Option (⌥, &kp LALT)  |  Command (⌘, &kp LGUI)
-[Row 4 우측]  [Windows] 한/영 (&kp LANG1)        |  Control (^, &kp RCTRL)|  Insert (&kp INSERT)
-              [Mac]     Command (⌘, &kp RGUI)    |  Control (^, &kp RCTRL)|  Insert (&kp INSERT)
-[Row 5 엄지]  [Windows] 좌측: Backspace (&kp BACKSPACE) | Space (&kp SPACE) | Lower (&mo 1)
-                        우측: Raise (&mo 4)             | Space (&kp SPACE) | Backspace (&kp BACKSPACE) | B
-              [Mac]     좌측: 한/영 (&kp LANG1)          | Space (&kp SPACE) | Lower (&mo 3)
-                        우측: Raise (&mo 4)             | Space (&kp SPACE) | Backspace (&kp BACKSPACE) | B
-*(참고: Windows 및 Mac 모두 우측 상단 끝은 Delete (&kp DELETE), 우측 엄지 3번째 키는 Backspace (&kp BACKSPACE)로 통일)*
+[Windows 모드 (Layer 0)]
+Row 4 좌측:  Control (LCTRL)  |  Windows (LGUI)        |  Alt (LALT)              <- 표준 PC 순서!
+Row 4 우측:  한/영 (LANG1)    |  Control (RCTRL)       |  Insert (INSERT)
+Row 5 엄지:  [좌측] Backspace |  Space                 |  Lower (MO 1)
+             [우측] Raise     |  Space                 |  Backspace | B
+
+[Mac 모드 (Layer 2)]
+Row 4 좌측:  Control (LCTRL)  |  Option (LALT)         |  Command (LGUI)          <- 표준 Mac 순서!
+Row 4 우측:  Command (RGUI)   |  Control (RCTRL)       |  Insert (INSERT)
+Row 5 엄지:  [좌측] 한/영     |  Space                 |  Lower (MO 3)
+             [우측] Raise     |  Space                 |  Backspace | B
+*(참고: Windows 및 Mac 모두 우측 상단 끝은 Delete, 우측 엄지 3번째 키는 Backspace로 통일)*
 ```
 
 ---

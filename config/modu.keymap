@@ -8,6 +8,9 @@
  * - Left MO: Navigation & F-keys (Win Lower / Mac Lower)
  * - Right MO: Media Controls (Raise)
  * - Both MOs: Adjust (Bootloader, BT, OS Toggle)
+ * - OS Modes:
+ *   - Windows (Layer 0): Standard PC layout [Ctrl] - [Win] - [Alt]
+ *   - Mac (Layer 2): Standard Apple layout [Ctrl] - [Opt] - [Cmd]
  */
 
 #include <behaviors.dtsi>
@@ -21,12 +24,17 @@
     /*
      * -------------------------------------------------------------------------
      * [레이어 구조 안내]
-     * - Layer 0 (default_layer) : Windows 기본
+     * - Layer 0 (default_layer) : Windows 기본 (Ctrl - Win - Alt)
      * - Layer 1 (lower_layer)   : Windows Lower (F1~F12, 방향키, Win 클립보드)
-     * - Layer 2 (mac_layer)     : Mac 기본
+     * - Layer 2 (mac_layer)     : Mac 기본 (Ctrl - Opt - Cmd)
      * - Layer 3 (mac_lower_layer): Mac Lower (F1~F12, 방향키, Mac 클립보드)
      * - Layer 4 (raise_media)   : 미디어 컨트롤 (밝기, 볼륨, 트랙 제어)
      * - Layer 5 (adjust_system) : 시스템 설정 (양손 엄지 동시 홀드 시 발동)
+     *
+     * [모드 전환 방법]
+     * - 왼쪽 엄지 MO(Lower) 또는 양손 엄지 MO(Adjust) 누른 상태에서:
+     *   - 49번 (Row 4 Col 1): &to 0 -> Windows 모드 전환
+     *   - 50번 (Row 4 Col 2): &to 2 -> Mac 모드 전환
      *
      * [시스템 리셋 콤보]
      * - Lower 또는 Adjust 상태에서 LCTRL(48) + 5 + 6 동시 입력
@@ -60,14 +68,14 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // Layer 0: 윈도우 기본
+        // Layer 0: 윈도우 기본 (표준 PC 배열: Ctrl - Win - Alt)
         default_layer {
             bindings = <
 &kp ESC       &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7     &kp N8     &kp N9    &kp N0     &kp DELETE
 &kp TAB       &kp Q      &kp W     &kp E   &kp R   &kp T   &kp Y     &kp U      &kp I      &kp O     &kp P      &kp BSLH
 &kp CAPS      &kp A      &kp S     &kp D   &kp F   &kp G   &kp H     &kp J      &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT     &kp Z      &kp X     &kp C   &kp V   &kp B   &kp N     &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RIGHT_SHIFT
-&kp LCTRL     &kp LALT   &kp LGUI  &none   &none   &none   &none     &none      &none      &kp LANG1 &kp RCTRL  &kp INSERT
+&kp LCTRL     &kp LGUI   &kp LALT  &none   &none   &none   &none     &none      &none      &kp LANG1 &kp RCTRL  &kp INSERT
 &kp BACKSPACE &kp SPACE  &mo 1                             &mo 4     &kp SPACE  &kp BACKSPACE &kp B
             >;
         };
@@ -79,12 +87,12 @@
 &kp GRAVE   &kp HOME      &kp UP        &kp END       &kp PG_UP &kp LC(INS)   &mkp MCLK  &kp GRAVE      &kp MINUS  &kp EQUAL  &trans    &trans
 &trans      &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN &kp LS(INS)   &mkp RCLK  &kp LG(LS(S))  &kp LBKT   &kp RBKT   &kp SQT   &kp ENTER
 &kp LSHFT   &trans        &trans        &trans        &trans    &trans        &mkp LCLK  &kp PSCRN      &trans     &trans     &kp BSLH  &kp RIGHT_SHIFT
-&trans      &trans        &trans        &trans        &trans    &trans        &trans     &trans         &trans     &trans     &kp INS   &kp DEL
+&trans      &to 0         &to 2         &trans        &trans    &trans        &trans     &trans         &trans     &trans     &kp INS   &kp DEL
 &trans      &trans        &trans                                              &trans     &kp ENTER      &kp BACKSPACE &trans
             >;
         };
 
-        // Layer 2: 맥 기본
+        // Layer 2: 맥 기본 (표준 Apple 배열: Ctrl - Opt - Cmd)
         mac_layer {
             bindings = <
 &kp ESC       &kp N1     &kp N2    &kp N3  &kp N4  &kp N5  &kp N6    &kp N7     &kp N8     &kp N9    &kp N0     &kp DELETE
@@ -103,7 +111,7 @@
 &kp GRAVE   &kp HOME      &kp UP        &kp END       &kp PG_UP &kp LG(C)     &mkp MCLK  &kp GRAVE      &kp MINUS  &kp EQUAL  &trans    &trans
 &trans      &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN &kp LG(V)     &mkp RCLK  &kp LG(LS(N4)) &kp LBKT   &kp RBKT   &kp SQT   &kp ENTER
 &kp LSHFT   &trans        &trans        &trans        &trans    &trans        &mkp LCLK  &kp PSCRN      &trans     &trans     &kp BSLH  &kp RIGHT_SHIFT
-&trans      &trans        &trans        &trans        &trans    &trans        &trans     &trans         &trans     &trans     &kp INS   &kp DEL
+&trans      &to 0         &to 2         &trans        &trans    &trans        &trans     &trans         &trans     &trans     &kp INS   &kp DEL
 &trans      &trans        &trans                                              &trans     &kp ENTER      &kp BACKSPACE &trans
             >;
         };
