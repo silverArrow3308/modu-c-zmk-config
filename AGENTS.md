@@ -47,6 +47,11 @@
 ### ⑤ 엄지 클러스터 동적 스캔 드라이버 (`alt_thumb_kscan.c`)
 - `P0.08` 핀의 상태에 따라 엄지 클러스터 Row 5의 물리 키 컬럼(Col 0 ↔ Col 2 스왑)을 드라이버 단에서 동적으로 리매핑
 
+### ⑥ 배터리 센서 및 잔량 보고 (`vbatt`, `CONFIG_ZMK_BATTERY_REPORTING`)
+- **하드웨어 회로**: `modu.dtsi`의 `&adc 6`(P0.30) 전압 분배기를 통해 배터리 전압(`&vbatt`) 측정 회로 내장
+- **LED 동작**: USB 전원 연결 시 화이트(White) 고정 점등. 배터리 잔량 부족(Low Battery) 전용 LED 경고 기능은 없음
+- **OS 잔량 보고**: `config/modu_left.conf` 및 `modu_right.conf`의 `CONFIG_ZMK_BATTERY_REPORTING=y` 설정을 통해 Mac/Windows 블루투스 위젯에 배터리 잔량(%) 표시 가능
+
 ---
 
 ## 3. 키맵 매트릭스 및 레이어 구성 분석
