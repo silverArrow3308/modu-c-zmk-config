@@ -14,7 +14,7 @@
 | **Layer 1** | **`lower_layer`** | 왼쪽 엄지 `MO 1` 홀드 | **Windows 네비게이션 & F키 (F1~F12, 방향키, Win 클립보드, 기호, 마우스)** | [SVG](docs/layer-1-lower.svg) |
 | **Layer 2** | **`mac_layer`** | Adjust에서 `Cmd(50)` | **Mac 기본 레이어** (왼쪽 엄지 `MO 3`, 오른쪽 엄지 `MO 4`) | [SVG](docs/layer-2-mac.svg) |
 | **Layer 3** | **`mac_lower_layer`** | 왼쪽 엄지 `MO 3` 홀드 | **Mac 네비게이션 & F키 (F1~F12, 방향키, Mac 클립보드, 기호, 마우스)** | [SVG](docs/layer-3-mac-lower.svg) |
-| **Layer 4** | **`raise_media`** | 오른쪽 엄지 `MO 4` 홀드 | **미디어 컨트롤 전용 (Win/Mac 공용: 밝기, 검색, 음성, 재생/정지, 볼륨)** | [SVG](docs/layer-4-raise-media.svg) |
+| **Layer 4** | **`raise_media`** | 오른쪽 엄지 `MO 4` 홀드 | **미디어 및 오른손 방향키 (Win/Mac 공용: 미디어/볼륨, IJKL 역T자 방향키)** | [SVG](docs/layer-4-raise-media.svg) |
 | **Layer 5** | **`adjust_system`** | **양손 엄지 MO 동시 홀드** | **시스템 설정 (BT 1~3, BT 초기화, 부트로더, Studio, Win/Mac 모드 전환)** | [SVG](docs/layer-5-adjust-system.svg) |
 
 ---
@@ -33,7 +33,7 @@
 #### [Layer 3] Mac 보조 레이어 (`mac_lower_layer`)
 ![Layer 3 - Mac Lower](docs/layer-3-mac-lower.svg)
 
-#### [Layer 4] 미디어 컨트롤 레이어 (`raise_media`)
+#### [Layer 4] 미디어 및 오른손 방향키 레이어 (`raise_media`)
 ![Layer 4 - Media Controls](docs/layer-4-raise-media.svg)
 
 #### [Layer 5] 시스템 설정 레이어 (`adjust_system`)
@@ -62,10 +62,11 @@
 
 ---
 
-## 3. 멀티미디어 키 매핑 (`raise_media`)
+## 3. 멀티미디어 및 오른손 방향키 매핑 (`raise_media`)
 
-오른손 엄지 첫 번째 키(`MO 4`)를 누른 상태에서 상단 Row 0을 누르면 OS 공통 미디어 제어 기능이 작동합니다:
+오른손 엄지 첫 번째 키(`MO 4`)를 누른 상태에서 조작합니다:
 
+### ① OS 공통 멀티미디어 키 (Row 0 상단열)
 | 키 위치 | 아이콘 | 기능 이름 | ZMK 키 코드 | 설명 |
 | :---: | :---: | :--- | :--- | :--- |
 | **F1** | 🔅 | 화면 밝기 낮춤 | `&kp C_BRI_DN` | 디스플레이 밝기 감소 |
@@ -80,6 +81,16 @@
 | **F10** | 🔇 | 음소거 | `&kp C_MUTE` | 소리 끄기 / 켜기 |
 | **F11** | 🔉 | 볼륨 낮춤 | `&kp C_VOL_DN` | 소리 크기 줄이기 |
 | **F12** | 🔊 | 볼륨 높임 | `&kp C_VOL_UP` | 소리 크기 키우기 |
+
+### ② 오른손 역T자형 방향키 클러스터 (IJKL)
+오른손 엄지(`MO 4`)를 누른 채 오른손만으로 자유롭게 방향키를 한 손 조작할 수 있습니다:
+
+| 키 위치 | 기본 모드 키 | 방향키 기능 | ZMK 키 코드 | 손가락 위치 및 설명 |
+| :---: | :---: | :---: | :--- | :--- |
+| **Row 1 Col 8** | **`I`** | **위쪽 (`UP`, ↑)** | `&kp UP` | 오른손 중지로 위쪽 이동 |
+| **Row 2 Col 7** | **`J`** | **왼쪽 (`LEFT`, ←)** | `&kp LEFT` | 오른손 검지로 왼쪽 이동 |
+| **Row 2 Col 8** | **`K`** | **아래쪽 (`DOWN`, ↓)** | `&kp DOWN` | 오른손 중지로 아래쪽 이동 |
+| **Row 2 Col 9** | **`L`** | **오른쪽 (`RIGHT`, →)** | `&kp RIGHT` | 오른손 약지로 오른쪽 이동 |
 
 ---
 

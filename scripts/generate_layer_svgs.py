@@ -42,8 +42,8 @@ LAYER_METADATA = {
     },
     "raise_media": {
         "file_name": "layer-4-raise-media.svg",
-        "title": "MODU-C Layer 4: Media Controls (Raise)",
-        "note": "오른쪽 엄지 MO 4 홀드 시 활성화 (Win/Mac 공용) · 밝기, Spotlight, 음성입력, 미디어/볼륨",
+        "title": "MODU-C Layer 4: Media Controls & Arrow Keys (Raise)",
+        "note": "오른쪽 엄지 MO 4 홀드 시 활성화 (Win/Mac 공용) · 미디어/볼륨 제어, 오른손 IJKL 방향키(↑←↓→)",
         "is_mac": False,
     },
     "adjust_system": {
